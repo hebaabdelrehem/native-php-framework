@@ -1,0 +1,90 @@
+<div class="headingcust">
+	<i class="glyphicon glyphicon-cog"></i> Search & Date,Time settings
+</div>
+
+<form role="form" class="form-horizontal" id="updatesettings" name="updatesettings" action="settings.php?act=edit">
+	<input type="hidden" value="extrasettings" name="group" />
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 29px">
+			<label>Enable search</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $exsearchen == "1"}checked{/if} value="{if $exsearchen == "1"}0{else}1{/if}" onchange="exsearchen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="exsearchen" id="exsearchen" value="{$exsearchen}" type="hidden"/>
+			<dfn>Enable the copyrights of your website to be showed to your users.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 29px">
+			<label>Enable date and time</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $exdatetimeen == "1"}checked{/if} value="{if $exdatetimeen == "1"}0{else}1{/if}" onchange="exdatetimeen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="exdatetimeen" id="exdatetimeen" value="{$exdatetimeen}" type="hidden"/>
+			<dfn>Enable the copyrights of your website to be showed to your users.</dfn>
+
+		</div>
+	</div>
+	
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Wellcome message settings
+	</div>
+	<div class="col-md-6 settingdiv">
+
+		<div class="form-group" style="padding-bottom: 29px">
+			<label>Enable welcome message</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $exwelmessen == "1"}checked{/if} value="{if $exwelmessen == "1"}0{else}1{/if}" onchange="exwelmessen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="exwelmessen" id="exwelmessen" value="{$exwelmessen}" type="hidden"/>
+			<dfn>If you want to close your website from users.</dfn>
+
+		</div>
+	
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Welcome message</label>
+			<textarea class="form-control" rows="6" name="exwelmess">{$exwelmess}</textarea>									
+
+ <dfn>Your closing message to view it to the users.</dfn>
+
+		</div>
+
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Advertisement settings 
+	</div>
+	<div class="col-md-6 settingdiv">
+
+		<div class="form-group" style="padding-bottom: 29px">
+			<label>Enable Advertisement</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $exweladven == "1"}checked{/if} value="{if $exweladven == "1"}0{else}1{/if}" onchange="exweladven.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="exweladven" id="exweladven" value="{$exweladven}" type="hidden"/>
+			<dfn>If you want to close your website from users.</dfn>
+
+		</div>
+	
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Advertisement content</label>
+			<textarea class="form-control" rows="6" name="exweladv">{$exweladv}</textarea>									
+
+ <dfn>Your closing message to view it to the users.</dfn>
+
+		</div>
+	</div>
+	
+	<div class="col-md-12 tcenter settingbutdiv">
+		<button type="submit" class="btn btn-primary" id="submit">
+			Update
+		</button>
+	</div>
+
+</form>

@@ -1,0 +1,50 @@
+ {include file="head.html"}
+			<ol class="breadcrumb">
+				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li class="">Menus Maker</li>
+                <li class="active">Menus editor</li>
+			</ol>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+                {include file='messages.html'}
+				
+			</div>
+             <div class="col-lg-12">
+<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Menus List : You have ({$count} menus)
+					<a data-id="{$i.id}" data-status="1" href="menus.php?act=addmenu" class="btn btn-primary pull-right">
+                                    <i class="glyphicon glyphicon-plus "></i> Add menu</a>	
+						</div>
+					<div class="panel-body">
+						<div class="row">
+						{foreach from=$menusdata item=i key=key}
+						{if $i.url eq '#'}
+                           
+                           
+                           <div class="col-md-3">
+				<div class="panel panel-default pagespanel2">
+					<div class="panel-heading">
+						{$i.name}
+					</div>
+					<div class="panel-body">
+						<ul>
+							{foreach from=$menuschild{$i.id} item=j key=key}
+							<li>{$j.name}</li>
+							{/foreach}
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+                         {/if}
+                        {/foreach}
+					</div></div>
+				</div>
+			</div>
+		</div>
+    </div>
+           </div>
+</div>

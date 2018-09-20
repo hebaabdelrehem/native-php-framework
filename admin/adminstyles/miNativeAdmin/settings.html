@@ -1,0 +1,182 @@
+{include file="head.html"}
+<ol class="breadcrumb">
+	<li>
+		<a href="#"><span class="glyphicon glyphicon-home"></span></a>
+	</li>
+	<li class="">
+		Settings
+	</li>
+	<li class="active">
+		Main Settings
+	</li>
+</ol>
+</div><!--/.row-->
+
+<div class="row">
+	<div class="col-lg-12">
+		{include file='messages.html'}
+
+	</div>
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Main settings <i class="glyphicon glyphicon-chevron-right" style="margin-right:0px !important;font-size: 14px"></i>
+						{if $setgroup == "generalsettings"}
+						General settings
+						{elseif $setgroup == "regsettings"}
+						Registration settings
+						{elseif $setgroup == "langstyle"}
+						Language & style settings
+						{elseif $setgroup == "secsettings"}
+						Security settings
+						{elseif $setgroup == "mailsettings"}
+						Mail settings
+						{elseif $setgroup == "compprofsettings"}
+						Company/Website profile settings
+						{elseif $setgroup == "ccentersettings"}
+						Contact center settings
+						{elseif $setgroup == "extrasettings"}
+						Extra settings
+						{elseif $setgroup == "pmanagersettings"}
+						Pages manager settings
+						{elseif $setgroup == "settings_other_lang"}
+						Settings for other languages
+						{elseif $setgroup == "all"}
+						All settings
+						{/if}
+
+						<button type="button" class="btn btn-primary pull-right menus-but" onClick="location.href='settings.php?setgroup=all'">
+							<i class="glyphicon glyphicon-cog "></i> All settings
+						</button>
+						<button type="button" class="btn btn-info pull-right menus-but" onClick="location.href='settings.php?setgroup=settings_other_lang'">
+							<i class="glyphicon glyphicon-refresh "></i> Settings for other languages
+						</button>
+					</div>
+					<div class="col-md-3">
+
+						<div class="headingcust" style="margin-top: 15px">
+							<i class="glyphicon glyphicon-th-list"></i> MiNative settings list
+						</div>
+						<ul class="todo-list settinglist">
+							{if $setgroup == "all"}
+							<li class="todo-list-item {if $setgroup == "all"}selectedset{/if}">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-cog"></i> All settings</label> </a>
+								</div>
+							</li>
+							{/if}
+							{if $setgroup == "settings_other_lang"}
+							<li class="todo-list-item  {if $setgroup == "settings_other_lang"}selectedset{/if}">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-refresh"></i> Settings for other languages</label>
+								</div>
+							</li>
+							{/if}
+							<a href="settings.php?setgroup=generalsettings">
+							<li class="todo-list-item {if $setgroup == "generalsettings"}selectedset{/if}">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-cog"></i> General settings</label>
+								</div>
+							</li> </a>
+							<a href="settings.php?setgroup=compprofsettings">
+							<li class="todo-list-item {if $setgroup == "compprofsettings"}selectedset{/if}">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-cloud"></i> Company/Website profile settings</label>
+								</div>
+							</li> </a>
+							<a href="settings.php?setgroup=regsettings">
+							<li class="todo-list-item {if $setgroup == "regsettings"}selectedset{/if}">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-user"></i> User registration settings</label>
+								</div>
+							</li> </a>
+							<a href="settings.php?setgroup=langstyle">
+							<li class="todo-list-item {if $setgroup == "langstyle"}selectedset{/if}">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-flash"></i> Language & Styles settings</label>
+								</div>
+							</li> </a>
+							<a href="settings.php?setgroup=secsettings">
+							<li class="todo-list-item {if $setgroup == "secsettings"}selectedset{/if}">
+								<div class="checkbox ">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-lock"></i> Security settings</label>
+								</div>
+							</li> </a>
+							<a href="settings.php?setgroup=mailsettings">
+							<li class="todo-list-item {if $setgroup == "mailsettings"}selectedset{/if}">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-repeat"></i> Mail settings</label>
+								</div>
+							</li> </a>
+							<a href="settings.php?setgroup=extrasettings">
+							<li class="todo-list-item {if $setgroup == "extrasettings"}selectedset{/if}">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-plus"></i> Extra settings</label>
+								</div>
+							</li> </a>
+							<li class="todo-list-item">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-pencil"></i> Editor settings</label>
+								</div>
+							</li>
+							<a href="settings.php?setgroup=ccentersettings">
+							<li class="todo-list-item {if $setgroup == "ccentersettings"}selectedset{/if}">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-envelope"></i> Contact center settings</label>
+								</div>
+							</li> </a>
+							<a href="settings.php?setgroup=pmanagersettings">
+							<li class="todo-list-item  {if $setgroup == "pmanagersettings"}selectedset{/if}">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-file"></i> Pages manager settings</label>
+								</div>
+							</li> </a>
+							<li class="todo-list-item">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-font"></i> Admin panal settings</label>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+
+					<div class="col-md-9">
+						<div class="panel-body panelbodyedit tabssty">
+							{if $setgroup == "generalsettings"}
+							{include file="settings-general.html"}
+							{elseif $setgroup == "regsettings"}
+							{include file="settings-registration.html"}
+							{elseif $setgroup == "langstyle"}
+							{include file="settings-langstyle.html"}
+							{elseif $setgroup == "secsettings"}
+							{include file="settings-security.html"}
+							{elseif $setgroup == "mailsettings"}
+							{include file="settings-mail.html"}
+							{elseif $setgroup == "compprofsettings"}
+							{include file="settings-company.html"}
+							{elseif $setgroup == "ccentersettings"}
+							{include file="settings-ccenter.html"}
+							{elseif $setgroup == "extrasettings"}
+							{include file="settings-extra.html"}
+							{elseif $setgroup == "pmanagersettings"}
+							{include file="settings-pagesmanager.html"}
+							{elseif $setgroup == "settings_other_lang"}
+							{include file="settings-other_lang.html"}
+							{elseif $setgroup == "all"}
+							{include file="settings-all.html"}
+							{/if}
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+

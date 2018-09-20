@@ -1,0 +1,288 @@
+<div class="headingcust">
+	<i class="glyphicon glyphicon-cog"></i> Captcha settings
+</div>
+
+<form role="form" class="form-horizontal" id="updatesettings" name="updatesettings" action="settings.php?act=edit">
+	<input type="hidden" value="secsettings" name="group" />
+
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable captcha</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $captchaen == "1"}checked{/if} value="{if $captchaen == "1"}0{else}1{/if}" onchange="captchaen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="captchaen" id="captchaen" value="{$captchaen}" type="hidden"/>
+			<dfn>Enable captcha to prevent spamers.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable captcha numburs</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $captchanumen == "1"}checked{/if} value="{if $captchanumen == "1"}0{else}1{/if}" onchange="captchanumen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="captchanumen" id="captchanumen" value="{$captchanumen}" type="hidden"/>
+			<dfn>Enable captcha to have numbers in it's pattern.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable captcha upper letters</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $captchaupleten == "1"}checked{/if} value="{if $captchaupleten == "1"}0{else}1{/if}" onchange="captchaupleten.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="captchaupleten" id="captchaupleten" value="{$captchaupleten}" type="hidden"/>
+			<dfn>Enable captcha to have upper letters in it's pattern.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable captcha sound</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $captchasounden == "1"}checked{/if} value="{if $captchasounden == "1"}0{else}1{/if}" onchange="captchasounden.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="captchasounden" id="captchasounden" value="{$captchasounden}" type="hidden"/>
+			<dfn>Allowing user to here the captcha if he can't read it.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 39px;">
+			<label>Enable captcha reload</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $captchareloaden == "1"}checked{/if} value="{if $captchareloaden == "1"}0{else}1{/if}" onchange="captchareloaden.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="captchareloaden" id="captchareloaden" value="{$captchareloaden}" type="hidden"/>
+			<dfn>Allowing user to change the captcha if he can't read it.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Captcha background color</label>
+			<input  class="form-control"  type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="{$captchabackcol}" style="width:100%;"  name="captchabackcol">
+			<dfn>The background color that will used to create the captcha image.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Captcha font color</label>
+			<input  class="form-control"  type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="{$captchafontcol}" style="width:100%;"  name="captchafontcol">
+			<dfn>The font color that will used to write on the captcha image.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="alert bg-primary" role="alert">
+			<span class="glyphicon glyphicon-info-sign"></span> What is captcha?
+			<br> 
+			 It is a type of challenge-response test used in computing to determine whether or not the user is human.
+			
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> reCAPTCHA
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 39px;">
+			<label>Enable reCAPTCHA</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $recaptchaen == "1"}checked{/if} value="{if $recaptchaen == "1"}0{else}1{/if}" onchange="recaptchaen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="recaptchaen" id="recaptchaen" value="{$recaptchaen}" type="hidden"/>
+			<dfn>Enable the system to user google recaptcha.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Verify link</label>
+			<input class="form-control" placeholder="" value="{$recaptchaverifylink}" name="recaptchaverifylink">
+			<dfn>Goole link that will be used to verify the user input.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Site key</label>
+			<input class="form-control" placeholder="" value="{$recaptchasitekey}" name="recaptchasitekey">
+			<dfn>Your site key that will used in verifying.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Secret key</label>
+			<input class="form-control" placeholder="" value="{$recaptchasecretkey}" name="recaptchasecretkey">
+			<dfn>Your secret key that will used in verifying.</dfn>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="alert bg-primary" role="alert">
+			<span class="glyphicon glyphicon-info-sign"></span> What is reCAPTCHA?
+			<br> 
+			 It is a type of captcha intrduced by google to websites to prevent spamers, you can read more info from <a target="_blank" href="https://developers.google.com/recaptcha/">here</a>.
+			
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Password security
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable password strength meter</label>
+
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $passgen == "1"}checked{/if} value="{if $passgen == "1"}0{else}1{/if}" onchange="passgen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="passgen" id="passgen" value="{$passgen}" type="hidden"/>
+			<dfn>Enable strength meter that show how strength the password is.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Force password to have letters</label>
+
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $passlett == "1"}checked{/if} value="{if $passlett == "1"}0{else}1{/if}" onchange="passlett.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="passlett" id="passlett" value="{$passlett}" type="hidden"/>
+			<dfn>Force users to choose passwords that contain letters [a:z].</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Force password to have upercase letters</label>
+
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $passuplett == "1"}checked{/if} value="{if $passuplett == "1"}0{else}1{/if}" onchange="passuplett.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="passuplett" id="passuplett" value="{$passuplett}" type="hidden"/>
+			<dfn>Force users to choose passwords that contain upercase letters [A:Z].</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Force password to have numbers</label>
+
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $passnum == "1"}checked{/if} value="{if $passnum == "1"}0{else}1{/if}" onchange="passnum.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="passnum" id="passnum" value="{$passnum}" type="hidden"/>
+			<dfn>Force users to choose passwords that contain numbers [0:9].</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 28px">
+			<label>Force password to have symbols</label>
+
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $passsym == "1"}checked{/if} value="{if $passsym == "1"}0{else}1{/if}" onchange="passsym.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="passsym" id="passsym" value="{$passsym}" type="hidden"/>
+			<dfn>Force users to choose passwords that contain symbols [!@#$%^&*(){}_=+-].</dfn>
+
+		</div>
+	</div>
+	
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Password length</label>
+			<output id="aapasslength" style="display: inline;float: right">
+				{$passlength}
+			</output>
+			<input value="{$passlength}" type = "range" min="6" max="24" onchange="aapasslength.value=value" name="passlength"/>
+			
+			<dfn>The length of password that shoudn't be less than it.</dfn>
+
+		</div>
+
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Check brute force attack
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable Check brute force attack</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $cbruteforceen == "1"}checked{/if} value="{if $cbruteforceen == "1"}0{else}1{/if}" onchange="cbruteforceen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="cbruteforceen" id="cbruteforceen" value="{$cbruteforceen}" type="hidden"/>
+			<dfn>Record and check the brute force attack.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Record ip & User agent</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $cbruteip == "1"}checked{/if} value="{if $cbruteip == "1"}0{else}1{/if}" onchange="cbruteip.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="cbruteip" id="cbruteip" value="{$cbruteip}" type="hidden"/>
+			<dfn>Record attacker ip and user agent.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Number of attempts before blocking</label>
+			<output id="aaattemptsn" style="display: inline;float: right">
+				{$attemptsn} attempt
+			</output>
+			<input value="{$attemptsn}" type = "range" min="2" max="10" onchange="aaattemptsn.value=value" name="attemptsn"/>
+			<dfn>The maximum number of allowed wrong login attemps befor blocking the user.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Block for (time in hours)</label>
+			<output id="aaattemptsblock" style="display: inline;float: right">
+				{$attemptsblock} hours
+			</output>
+			<input value="{$attemptsblock}" type = "range" min="2" max="48" onchange="aaattemptsblock.value=value" name="attemptsblock"/>
+			<dfn>The time user will be blocked for when her reach the maximum number of attempts.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Send email to administrator</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $cbrutemailadmin == "1"}checked{/if} value="{if $cbrutemailadmin == "1"}0{else}1{/if}" onchange="cbrutemailadmin.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="cbrutemailadmin" id="cbrutemailadmin" value="{$cbrutemailadmin}" type="hidden"/>
+			<dfn>Send an email to alert the website admin about to wrong attempts.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Send email to account owner</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $cbrutemailowner == "1"}checked{/if} value="{if $cbrutemailowner == "1"}0{else}1{/if}" onchange="cbrutemailowner.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="cbrutemailowner" id="cbrutemailowner" value="{$cbrutemailowner}" type="hidden"/>
+			<dfn>Send an email to alert the account owner about to wrong attempts.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="alert bg-primary" role="alert">
+			<span class="glyphicon glyphicon-info-sign"></span> What is brute force attack?
+			<br> 
+			 It's a way, hackers using it to guss the passwords of an account to hack it, and you can protect you self from this by activating 
+			 "Check brute force attack". <br>
+			 Also you can read more details from <a href="https://www.owasp.org/index.php/Blocking_Brute_Force_Attacks" target="_blank">here</a>
+			
+		</div>
+	</div>
+
+	<div class="col-md-12 tcenter settingbutdiv">
+		<button type="submit" class="btn btn-primary" id="submit">
+			Update
+		</button>
+	</div>
+
+</form>

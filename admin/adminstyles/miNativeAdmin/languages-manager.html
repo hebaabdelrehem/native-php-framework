@@ -1,0 +1,122 @@
+{include file="head.html"}
+<ol class="breadcrumb">
+	<li>
+		<a href="#"><span class="glyphicon glyphicon-home"></span></a>
+	</li>
+	<li class="">
+		Tools
+	</li>
+	<li class="">
+		Lanuages manager
+	</li>
+
+</ol>
+</div><!--/.row-->
+<div class="row">
+	<div class="col-lg-12">
+		{include file='messages.html'}
+
+	</div>
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Languages
+
+					</div>
+
+					<div class="col-lg-9">
+						<div class="panel-body">
+							<div class="alert bg-info  tcenter" role="alert" style="font-size: 14px;line-height: 1">
+								<i class="glyphicon glyphicon-info-sign"></i> Note: The main language of minative system is "English", You cannot edit, disable or delete it.
+
+							</div>
+							<table class="table table-condensed tablet" data-toggle="table"  data-select-item-name="toolbar1">
+								<thead class="">
+									<tr>
+										<th>Name</th>
+										<th>Filename</th>
+										<th>Direction</th>
+										<th>Language code</th>
+										<th>Actions</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									{foreach from=$languages item=i key=key}
+									<tr>
+
+										<td> {$i.name} </td>
+										<td> {$i.filename} </td>
+										<td> {$i.direction} </td>
+										<td> {$i.langcode} </td>
+
+										<td> {if $i.id != 1}
+										<div class="langswitch" id="{$i.id}">
+											<form role="form" action="usergroups.php?act=changeperm" method="post">
+												
+												<label class="switch switch-left-right">
+													<input class="switch-input changelangst"  data-id="{$i.id}" type="checkbox" {if $i.status == "1"}checked{/if}
+													value="{if $i.status == "1"}0{else}1{/if}" onchange="langstatusaa.value=value"/>
+													<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+												<input type="hidden" name="langstatus" id="langstatusaa" value="{$i.filename}" />
+												<input type="hidden" name="filename" value="{$i.filename}" />
+
+											</form>
+										</div> {else}System main language
+										{/if}
+										{if $i.id != 1} <a data-filename="{$i.filename}" href="languages.php?act=dellang" id="updatelang" title="update language"> <i class="glyphicon glyphicon-refresh"></i></a><a data-langcode="{$i.langcode}" href="languages.php?act=dellang" id="delbuttonlang"> <i class="glyphicon glyphicon-trash deli"></i></a> {/if} </td>
+
+									</tr>
+									{/foreach}
+								</tbody>
+							</table>
+							<br>
+							<div class="alert bg-primary" role="alert">
+								<span class="glyphicon glyphicon-info-sign"></span> Adding new languages
+								<br>
+								1. Upload your language.php file to 'languages' main directory in minative system root folder.
+								<br>
+								2. Come to Tools > Languages manager and start adding the language.
+
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-lg-3">
+						<h4><i class="glyphicon glyphicon-plus profilei"></i> Add new language </h4>
+
+						<form role="form" id="addnewlang" name="addmenuchild" action="">
+
+							<div class="form-group">
+								<label>File name</label>
+								<input class="form-control" placeholder="" name="filename" value="*.php">
+							</div>
+
+							<div class="form-group">
+								<label>Status</label>
+								<select class="form-control" name="status">
+									<option value="1">Active</option>
+									<option value="0">Not active</option>
+								</select>
+							</div>
+							<div class="col-md-12 tcenter">
+								<button type="submit" class="btn btn-primary" id="submit3">
+									Add language
+								</button>
+								<button type="reset" class="btn btn-default">
+									Reset
+								</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /.col-->
+
+</div>

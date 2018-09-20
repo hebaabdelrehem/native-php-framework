@@ -1,0 +1,114 @@
+<form role="form" class="form-horizontal" id="updatesettings" name="updatesettings" action="settings.php?act=edit">
+	<input type="hidden" value="langstyle" name="group" />
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Language settings
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Default language</label>
+
+			<select class="form-control" name="mainlang">
+
+				{foreach from=$languages item=i key=key}
+				<option value="{$i.langcode}" {if $mainlang eq $i.langcode}selected{/if}>{$i.name}</option>
+				{/foreach}
+			</select>
+			<dfn>The main language your website run with, from languages folder.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 29px">
+			<label>Allow language switching</label>
+			<label class="switch switch-left-right pull-right" s>
+				<input class="switch-input" type="checkbox" {if $allowlangswit == "1"}checked{/if} value="{if $allowlangswit == "1"}0{else}1{/if}" onchange="allowlangswit.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="allowlangswit" id="allowlangswit" value="{$allowlangswit}" type="hidden"/>
+			<dfn>Allow users to switch bettween languages avaliable in languages folder.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="alert bg-primary" role="alert">
+			<span class="glyphicon glyphicon-info-sign"></span> Uploading new language:
+			<br> 
+			You can upload new language by uploading the language *.php 
+			file to <b>"languages folder"</b> in your script path, and go to the settings to activate it. 
+			
+		</div>
+	</div>
+	<div style="clear: both"></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Style settings
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Default style</label>
+
+			<select class="form-control" name="mainstyle">
+				{foreach from=$stylesdirs item=f key=key}
+				<option value="{$f}" {if $mainstyle eq $f}selected{/if}>{$f}</option>
+				{/foreach}
+			</select>
+			<dfn>The default style that the system will use when loading.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+
+			<label>Style width (in pixels)</label>
+			<output id="rangevalue" style="display: inline;float: right">
+				{$stylewidth} PX
+			</output>
+			<input value="{$stylewidth}" type = "range" min="700" max="1200" onchange="rangevalue.value=value" name="stylewidth"/>
+
+			<dfn>The width of the style used as default style.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group"  style="padding-bottom: 20px">
+
+			<label>Allow style switching</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $allowstyleswit == "1"}checked{/if} value="{if $allowstyleswit == "1"}0{else}1{/if}" onchange="allowstyleswit.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="allowstyleswit" id="allowstyleswit" value="{$allowstyleswit}" type="hidden"/>
+			<dfn>Allow users to switch bettween styles avaliable in styles folder.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="alert bg-primary" role="alert">
+			<span class="glyphicon glyphicon-info-sign"></span> Uploading new style:
+			<br> 
+			You can upload new style by uploading the new style folder 
+			to <b>"styles folder"</b> in your script path, and go to the settings to activate it. 
+			
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Users action with language and styles
+	</div>
+	<div class="col-md-6 settingdiv">
+
+		<div class="form-group"  style="padding-bottom: 39px">
+
+			<label>Override user settings</label>
+
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $overrideuserlangcache == "1"}checked{/if} value="{if $overrideuserlangcache == "1"}0{else}1{/if}" onchange="overrideuserlangcache.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="overrideuserlangcache" id="overrideuserlangcache" value="{$overrideuserlangcache}" type="hidden"/>
+			<dfn>Ignoring the users settings and force to use default language and style.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-12 tcenter settingbutdiv">
+		<button type="submit" class="btn btn-primary" id="submit">
+			Update
+		</button>
+	</div>
+</form>

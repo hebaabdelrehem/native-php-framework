@@ -1,0 +1,246 @@
+{include file="head.html"}
+<ol class="breadcrumb">
+	<li>
+		<a href="#"><span class="glyphicon glyphicon-home"></span></a>
+	</li>
+	<li class="">
+		Menus Maker
+	</li>
+	<li class="active">
+		Menu {$pname} childs
+	</li>
+</ol>
+</div><!--/.row-->
+<div class="row">
+	<div class="col-lg-12">
+		{include file='messages.html'}
+
+	</div>
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Childs list for "{$pname}" menu
+						<button type="button" class="btn btn-primary pull-right menus-but" onClick="location.href='menus.php?act=addmenu'">
+							<i class="glyphicon glyphicon-plus "></i> Add new menu
+						</button>
+					</div>
+
+					<div class="panel-heading">
+						<i class="glyphicon glyphicon-edit "></i> Type : {$type} | Url : {$url} | Order : {$order} |
+						{if $status eq 1}
+						<i class="glyphicon glyphicon-ok green"></i> Active
+						{else}
+						<i class="glyphicon glyphicon-remove red"></i> Not Active
+						{/if}
+						<button type="button" class="btn btn-warning pull-right menus-but" onClick="location.href='menus.php?act=editmenu&menuid={$menuid}'" >
+							<i class="glyphicon glyphicon-edit "></i> Edit menu
+						</button>
+						{if $status eq 1}
+						<a data-id="{$menuid}" data-status="0" data-type="menus" href="menus.php?act=menuschangest" id="menuschangest" class="btn btn-danger pull-right menus-but"> <i class="glyphicon glyphicon-off "></i> Disable menu</a>
+						{else}
+						<a data-id="{$menuid}" data-status="1" data-type="menus" href="menus.php?act=menuschangest" id="menuschangest" class="btn btn-success pull-right menus-but"> <i class="glyphicon glyphicon-off "></i> Activate menu</a>
+						{/if}
+					</div>
+
+					<div class="col-lg-9">
+
+						<div class="panel-body">
+							<table class="table table-condensed tablet" data-toggle="table"   data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="order" data-sort-order="asc">
+								<thead class="">
+									<tr>
+										<th data-field="id" data-sortable="true">ID</th>
+										<th>Name</th>
+										<th>Parent</th>
+										<th>URL</th>
+										<th>Order</th>
+										<th>Status</th>
+										<th>Actions</th>
+									</tr>
+								</thead>
+								<tbody>
+									{foreach from=$menuchild item=i key=key}
+									<tr>
+										<td>{$i.id}</td>
+										<td> {$i.name} </td>
+										<td> {foreach from=$menusdata item=j key=key}
+										{if {$j.id} eq {$i.parent}} {$j.name} {/if}
+										{/foreach} </td>
+										<td> {$i.url} </td>
+										<td> {$i.order} </td>
+										<td> {if $i.status eq 1}<i class="glyphicon glyphicon-ok green"></i> Active {else}<i class="glyphicon glyphicon-remove red"></i> Not Active {/if}</td>
+										<td><a data-toggle="modal" class="editlink" data-id="{$i.id}" data-name="{$i.name}" data-url="{$i.url}" data-url="{$i.parent}" data-order="{$i.order}" data-status="{$i.status}" href="#myModal"><i class="glyphicon glyphicon-cog"></i></a><a data-id="{$i.id}" href="menus.php?act=delchild" id="delbuttonchild"><i class="glyphicon glyphicon-trash deli"></i></a></td>
+									</tr>
+									{/foreach}
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="col-lg-3 tabssty">
+						<h4><i class="glyphicon glyphicon-plus profilei"></i> Add new link </h4>
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active">
+								<a href="#en" aria-controls="english" role="tab" data-toggle="tab">English</a>
+							</li>
+							{foreach from=$languages item=language key=i}
+							{if $language.langcode != 'en'}
+							<li role="presentation">
+								<a href="#{$language.name}" aria-controls="{$language.name}" role="tab" data-toggle="tab">{$language.name} </a>
+							</li>
+							{/if}
+							{/foreach}
+						</ul>
+						<form role="form" id="addmenuchild" name="addmenuchild" action="">
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="en">
+									<div class="form-group">
+										<label>English Link title</label>
+										<input class="form-control" placeholder="" name="childname">
+									</div>
+								</div>
+								{foreach from=$languages item=language key=i}
+								{if $language.langcode != 'en'}
+								<div role="tabpanel" class="tab-pane" id="{$language.name}">
+									<input class="form-control" placeholder="" name="lang[]" value="{$language.langcode}" type="hidden">
+									<div class="form-group">
+										<label>{$language.name} Link title</label>
+										<input class="form-control" placeholder="" name="childname{$language.langcode}">
+									</div>
+								</div>
+								{/if}
+								{/foreach}
+								<div class="form-group">
+									<label>Url</label>
+									<input class="form-control" placeholder="" name="url" value="#">
+								</div>
+
+								<div class="form-group">
+									<label>Parent</label>
+									<select class="form-control" name="parent">
+
+										{foreach from=$menusdata item=a key=key}
+										{if $a.url eq "#"}
+										<option value="{$a.id}" {if {$a.name} eq {$pname}} selected {/if}>{$a.name} ( {$a.type} ) ( {$a.place} )</option>
+										{/if}
+										{/foreach}
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label>Order</label>
+									<input class="form-control" placeholder="" name="order">
+								</div>
+								<div class="form-group">
+									<label>Status</label>
+									<select class="form-control" name="status">
+										<option value="1">Active</option>
+										<option value="0">Not active</option>
+									</select>
+								</div>
+								<div class="col-md-12 tcenter settingbutdiv">
+									Other languages to add :
+									{foreach from=$languages item=language key=i}
+									{if $language.langcode != 'en'}
+									{$language.name}
+									<input type="checkbox" name="langup[]" value="{$language.langcode}">
+									{/if}
+									{/foreach}
+									<button type="submit" class="btn btn-primary" id="submit3">
+										Add link
+									</button>
+
+								</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+</div><!-- /.col-->
+
+</div>
+
+<div class="modal fade bs-example-modal-sm loginmod " id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel"><i class="glyphicon glyphicon-cog"></i> Edit link</h4>
+				<div id="modelactionedit" class="tcenter"></div>
+			</div>
+			<div class="modal-body">
+				
+				<form method="post" id="editmenuchild" action="" name="">
+					
+							<div class="form-group">
+								<label>English Link title</label>
+								<input class="form-control" placeholder="" name="childname" id="childname">
+								<input type="hidden" name="id" id="id">
+							</div>
+						
+						{foreach from=$languages item=language key=i}
+						{if $language.langcode != 'en'}
+						<div class="form-group">
+							<input class="form-control" placeholder="" name="lang[]" value="{$language.langcode}" type="hidden">
+								<label>{$language.name} English Link title</label>
+								<input class="form-control" placeholder="" name="childname{$language.langcode}">
+								
+							</div>
+						{/if}
+						{/foreach}
+						<div class="form-group">
+							<label>Url</label>
+							<input class="form-control" placeholder="" name="url" value="#" id="url">
+						</div>
+						<div class="form-group">
+							<label>Parent</label>
+							<input type="hidden" id="parent">
+							<select class="form-control" name="parent" id="parent">
+								{foreach from=$menusdata item=a key=key}
+								{if $a.url eq "#"}
+								<option value="{$a.id}" {if {$a.id} eq {$menuid}} selected {/if}>{$a.name} ( {$a.type} ) ( {$a.place} )</option>
+								{/if}
+								{/foreach}
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Order</label>
+							<input class="form-control" placeholder="" name="order" id="order">
+						</div>
+						<div class="form-group">
+							<label>Status</label>
+							<select class="form-control" name="status" id="status">
+								<option value="1">Active</option>
+								<option value="0">Not active</option>
+							</select>
+						</div>
+					
+					<div class="modal-footer settingbutdiv">
+						<div style="padding:5px;display: inline-block;">
+							Other languages to edit :
+							{foreach from=$languages item=language key=i}
+
+							{$language.name}
+							<input type="checkbox" name="langup[]" value="{$language.langcode}">
+
+							{/foreach}
+						</div>
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Close
+						</button>
+						<button type="submit" class="btn btn-primary" id="submit2">
+							Edit
+						</button>
+					</div>
+			
+			</form>
+			</div>
+		</div>
+	</div>
+</div>

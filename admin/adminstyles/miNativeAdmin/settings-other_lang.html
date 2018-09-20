@@ -1,0 +1,243 @@
+<ul class="nav nav-tabs " role="tablist">
+	{foreach from=$languages item=language key=i}
+	{if $language.langcode != 'en'}
+	<li role="presentation"  class="{if $i == 1} active {/if}">
+		<a href="#{$language.langcode}" aria-controls="{$language.langcode}" role="tab" data-toggle="tab">{$language.name}</a>
+	</li>
+	{/if}
+	{/foreach}
+</ul>
+<form role="form" class="form-horizontal" id="updatesettings" name="updatesettings" action="settings.php?act=edit">
+	<div class="tab-content">
+		{foreach from=$languages item=language key=i}
+		{if $language.langcode != 'en'}
+		<div role="tabpanel" class="tab-pane fade {if $i == 1}in active {/if}" id="{$language.langcode}">
+
+			<div class="headingcust">
+				<i class="glyphicon glyphicon-cog"></i> {$language.name} General settings 
+				{if {$langnotes{$language.langcode}} != " "}<span class="label label-danger labelsett">{$langnotes{$language.langcode}}</span>{/if}
+			</div>
+
+			<input type="hidden" value="settings_other_lang" name="group" />
+			<input type="hidden" value="{$language.langcode}" name="lang[]" />
+
+			<div class="col-md-6 settingdiv">
+				<div class="form-group">
+					<label>Site Name</label>
+
+					<input class="form-control" placeholder="" value="{$sitename_other{$language.langcode}}" name="sitename{$language.langcode}">
+					<dfn>Your website/company name, ex: MiNative Ltd.</dfn>
+
+				</div>
+			</div>
+			<div class="col-md-6 settingdiv">
+				<div class="form-group">
+					<label>Site sLogn</label>
+
+					<input class="form-control" placeholder="" value="{$siteslogn_other{$language.langcode}}" name="siteslogn{$language.langcode}">
+					<dfn>Your website/company slogn, ex: Exeeding limits.</dfn>
+
+				</div>
+			</div>
+
+			<div class="col-md-6 settingdiv">
+				<div class="form-group">
+					<label>Copyrights</label>
+
+					<input class="form-control" placeholder="" value="{$copyright_other{$language.langcode}}" name="copyright{$language.langcode}">
+					<dfn>The copyrights of your website.</dfn>
+
+				</div>
+			</div>
+
+			<div class="col-md-6 settingdiv">
+				<div class="form-group">
+					<label>Meta Description</label>
+
+					<input class="form-control" placeholder="" value="{$metadisc_other{$language.langcode}}" name="metadisc{$language.langcode}">
+					<dfn>Meta description to be used by search engiens.</dfn>
+
+				</div>
+			</div>
+			<div class="col-md-6 settingdiv">
+				<div class="form-group">
+					<label>Meta keyword</label>
+
+					<input class="form-control" placeholder="" value="{$metakey_other{$language.langcode}}" name="metakey{$language.langcode}">
+					<dfn>Meta keyword to be used by search engiens.</dfn>
+
+				</div>
+			</div>
+
+			<div class="col-md-6 settingdiv">
+				<div class="form-group">
+					<label>Closing messages</label>
+					<textarea class="form-control" rows="6" name="closingmessage{$language.langcode}">{$closingmessage_other{$language.langcode}}</textarea>																					
+
+ <dfn>Your closing message to view it to the users.</dfn>
+
+				</div>
+
+			</div>
+			<div style="clear:both "></div>
+			<div class="headingcust">
+				<i class="glyphicon glyphicon-cog"></i> Company profile informations
+			</div>
+			<div class="col-md-6 settingdiv">
+				<div class="form-group">
+					<label>Company/Website full name</label>
+
+					<input class="form-control" placeholder="" value="{$compfullname_other{$language.langcode}}" name="compfullname{$language.langcode}">
+					<dfn>Company/website name, ex: MiNative for information systems co.</dfn>
+
+				</div>
+				<div class="form-group">
+					<label>Manager name</label>
+
+					<input class="form-control" placeholder="" value="{$compmanname_other{$language.langcode}}" name="compmanname{$language.langcode}">
+					<dfn>Your company/website manager name.</dfn>
+
+				</div>
+				</div>
+				<div class="col-md-6 settingdiv">
+				<div class="form-group">
+					<label>Manager title</label>
+
+					<input class="form-control" placeholder="" value="{$compmantit_other{$language.langcode}}" name="compmantit{$language.langcode}">
+					<dfn>Your company/website manager title, ex: Founder, GM, CEO.</dfn>
+
+				</div>
+
+				<div class="form-group">
+					<label>Main branch address</label>
+
+					<input class="form-control" placeholder="" value="{$mainbrabadd_other{$language.langcode}}" name="mainbrabadd{$language.langcode}">
+					<dfn>Your company main branch address.</dfn>
+
+				</div>
+			</div>
+			<div class="col-md-12 settingdiv">
+				<div class="form-group" style="padding-bottom: 25px">
+					<label>Company/Website activities</label>
+					<textarea class="form-control" rows="13" name="compactivities{$language.langcode}" id="textareatiny{$i}">{$compactivities_other{$language.langcode}}</textarea>														
+
+ <dfn>Your company/website activities that it setuped for.</dfn>
+
+				</div>
+			</div>
+
+			<div style="clear:both "></div>
+			<div class="headingcust">
+				<i class="glyphicon glyphicon-cog"></i> Registration terms
+			</div>
+			<div class="col-md-12 settingdiv">
+				<div class="form-group">
+					<label>Registration terms</label>
+					<textarea class="form-control" rows="12" name="termscontent{$language.langcode}">{$termscontent_other{$language.langcode}}</textarea>
+					<dfn>Meta keyword to be used by search engiens.</dfn>
+				</div>
+			</div>
+			<div style="clear:both "></div>
+			<div class="headingcust">
+				<i class="glyphicon glyphicon-cog"></i> Mail settings
+			</div>
+
+			<div class="col-md-7 settingdiv">
+				<div class="form-group">
+					<label>Default Mail header</label>
+					<textarea class="form-control" rows="5" name="defaultmailheader{$language.langcode}">{$defaultmailheader_other{$language.langcode}}</textarea>
+
+					<dfn>The content of the default email header.</dfn>
+
+				</div>
+
+				<div class="form-group">
+					<label>Default Mail footer</label>
+					<textarea class="form-control" rows="5" name="defaultmailfooter{$language.langcode}">{$defaultmailfooter_other{$language.langcode}}</textarea>
+
+					<dfn>The content of the default email footer.</dfn>
+
+				</div>
+
+				<div class="form-group">
+					<label>Default Mail body</label>
+					<textarea class="form-control" rows="10" name="defaultmailbody{$language.langcode}">{$defaultmailbody_other{$language.langcode}}</textarea>														
+
+ <dfn>The content of the default email body.</dfn>
+
+				</div>
+
+			</div>
+			<div class="col-md-5 settingdiv">
+				<div class="form-group">
+					<label>Default Mail Css</label>
+					<textarea class="form-control" rows="29" name="defaultmailcss{$language.langcode}">{$defaultmailcss_other{$language.langcode}}</textarea>
+
+					<dfn>The style of the default email.</dfn>
+
+				</div>
+
+			</div>
+			<div style="clear:both "></div>
+			<div class="headingcust">
+				<i class="glyphicon glyphicon-cog"></i> Extra settings
+			</div>
+			<div class="col-md-6 settingdiv">
+				<div class="form-group">
+					<label>Welcome message</label>
+					<textarea class="form-control" rows="6" name="exwelmess{$language.langcode}">{$exwelmess_other{$language.langcode}}</textarea>														
+
+ <dfn>Your closing message to view it to the users.</dfn>
+
+				</div>
+
+			</div>
+			<div class="col-md-6 settingdiv">
+				<div class="form-group">
+					<label>Advertisement content</label>
+					<textarea class="form-control" rows="6" name="exweladv{$language.langcode}">{$exweladv_other{$language.langcode}}</textarea>														
+
+ <dfn>Your closing message to view it to the users.</dfn>
+
+				</div>
+			</div>
+			<div style="clear:both "></div>
+			<div class="headingcust">
+				<i class="glyphicon glyphicon-cog"></i> Contact center settings
+			</div>
+			<div class="col-md-6 settingdiv">
+				<div class="form-group">
+					<label>Automatic new message reply</label>
+					<textarea class="form-control" rows="6" name="ccenterautoreply{$language.langcode}">{$ccenterautoreply_other{$language.langcode}}</textarea>
+
+					<dfn>The content of the default email header.</dfn>
+
+				</div>
+			</div>
+			<div class="col-md-6 settingdiv">
+				<div class="form-group">
+					<label>Automatic message closing reply</label>
+					<textarea class="form-control" rows="6" name="ccentercloseautoreply{$language.langcode}">{$ccentercloseautoreply_other{$language.langcode}}</textarea>
+
+					<dfn>The content of the default email header.</dfn>
+
+				</div>
+			</div>
+		</div>
+		{/if}
+		{/foreach}
+		<div class="col-md-12 settingbutdiv">
+			<div style="padding:5px;display: inline-block;">
+				Languages to update : 
+			{foreach from=$languages item=language key=i}
+	{if $language.langcode != 'en'}
+	{$language.name} <input type="checkbox" name="langup[]" value="{$language.langcode}" checked>
+	{/if}
+	{/foreach}
+			</div> 
+			<button type="submit" class="btn btn-primary" id="submit">
+				Update
+			</button>
+		</div>
+	</div>
+</form>

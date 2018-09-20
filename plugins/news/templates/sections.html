@@ -1,0 +1,82 @@
+{include file="file:[11]head.html"} <script src="js/news.js"></script>
+
+<ol class="breadcrumb">
+	<li>
+		<a href="#"><span class="glyphicon glyphicon-home"></span></a>
+	</li>
+
+	<li class="">
+		News
+	</li>
+	<li class="active">
+		Sections
+	</li>
+</ol>
+
+<div class="row">
+	<div class="col-lg-12">
+		{include file='file:[11]messages.html'}
+
+	</div>
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						'News' plugin sections
+						<div class="pluginhead">News Plugin</div>
+						<button type="button" class="btn btn-primary pull-right menus-but" onClick="location.href='news.admin.php?act=addSection'">
+							<i class="glyphicon glyphicon-plus "></i> Add new section
+						</button>
+						
+					</div>
+
+					<div class="col-md-12">
+						<div class="panel-body">
+							<table class="table table-condensed tablet" data-toggle="table"   data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="id" data-sort-order="asc">
+								<thead class="">
+									<tr>
+										<th data-field="state" data-checkbox="true">ID</th>
+										<th data-field="id" data-sortable="true">ID</th>
+										<th>Section Picture</th>
+										<th>Section Name</th>
+										<th>Section description</th>
+
+										<th>Active</th>
+										<th>Actions</th>
+									</tr>
+								</thead>
+								<tbody>
+									{foreach from=$Sections item=i key=key}
+									<tr>
+										<td>{$i.id}</td>
+										<td>{$i.id}</td>
+										<td>{if $i.sectionPicture != ' '} <img src="../../contents/news/{$i.sectionPicture}" style="width: 100px;height: 100px;" /> {else}No Pictures{/if}</td>
+										<td>{$i.sectionName}</td>
+										<td>{$i.sectionDescrip|truncate:100:" ...":true}</td>
+										<td>
+										<div class="langswitch" id="{$i.id}">
+											<form role="form" action="usergroups.php?act=changeperm" method="post">
+
+												<label class="switch switch-left-right">
+													<input class="switch-input changepagest"  data-id="{$i.id}" type="checkbox" {if $i.status == "1"}checked{/if}
+													value="{if $i.status == "1"}0{else}1{/if}" onchange="pagestatusaa.value=value"/>
+													<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+												<input type="hidden" name="pagestatus" id="pagestatusaa" value="{$i.status}" />
+												<input type="hidden" name="id" value="{$i.id}" />
+
+											</form>
+										</div></td>
+										<td class="widthplu"><a href="news.admin.php?act=listSectionContent&id={$i.id}"> <i class="glyphicon glyphicon-list profilei"></i></a><a href="news.admin.php?act=editSection&id={$i.id}"> <i class="glyphicon glyphicon-cog"></i></a><a data-id="{$i.id}" href="news.admin.php?act=dodel" id="delSection"> <i class="glyphicon glyphicon-trash deli"></i></a></td>
+									</tr>
+									{/foreach}
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

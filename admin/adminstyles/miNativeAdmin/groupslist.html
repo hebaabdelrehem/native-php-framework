@@ -1,0 +1,101 @@
+ {include file="head.html"}
+			<ol class="breadcrumb">
+				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li class="">Users</li>
+                <li class="active">List user groups</li>
+			</ol>
+		</div><!--/.row-->
+		<div class="row">
+			<div class="col-lg-12">
+                {include file='messages.html'}
+				
+			</div>
+             <div class="col-lg-12">
+			<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">MiNative groups list
+						 <button type="button" class="btn btn-primary pull-right menus-but" onClick="location.href='usergroups.php?act=addgroup'">
+                    	<i class="glyphicon glyphicon-cog "></i> Add group</button>
+						</div>
+					<div class="panel-body">
+						
+						<table class="table table-condensed tablet" data-toggle="table"  data-sort-order="asc">
+						    <thead class="">
+						    <tr>
+                                <th data-field="state" data-checkbox="true">ID</th>
+						        <th data-field="id" data-sortable="true">ID</th>
+						        <th>Group name</th>
+						        <th>Group color</th>
+                                <th>User title</th>
+                                <th>Actions</th>
+						    </tr>
+						    </thead>
+                            <tbody>
+                                {foreach from=$groupdata_minative item=i key=key}
+                            <tr>
+                            <td>{$i.id}</td>
+                            <td>{$i.id}</td>
+                            <td><span style="color: {$i.color} !important">{$i.groupname}</span></td>
+                            <td>{$i.color}</td>
+                            <td>{$i.usertitle}</td>
+                            <td>
+                            <a href="usergroups.php?act=groupusers&groupid={$i.id}"><i class="glyphicon glyphicon-user profilei"></i></a>
+                            <a href="usergroups.php?act=viewgroup&id={$i.id}"><i class="glyphicon glyphicon-cog"></i></a>
+                            
+                            </td>
+                            </tr>
+                                {/foreach}
+                            </tbody>
+						</table>
+					</div>
+				</div>
+				
+				<div class="panel panel-default">
+					<div class="panel-heading">Other groups List </div>
+					<div class="panel-body">
+						
+						<table class="table table-condensed tablet" data-toggle="table" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="id" data-sort-order="asc">
+						    <thead class="">
+						    <tr>
+                                <th data-field="state" data-checkbox="true">ID</th>
+						        <th data-field="id" data-sortable="true">ID</th>
+						        <th>Group name</th>
+						        <th>Group color</th>
+                                <th>User title</th>
+                                <th>Actions</th>
+						    </tr>
+						    </thead>
+                            <tbody>
+                                {foreach from=$groupdata_other item=j key=key}
+                            <tr>
+                            <td>{$j.id}</td>
+                            <td>{$j.id}</td>
+                            <td><span style="color: {$j.color} !important">{$j.groupname}</span></td>
+                            <td>{$j.color}</td>
+                            <td>{$j.usertitle}</td>
+                            <td>
+                            <a href="usergroups.php?act=groupusers&groupid={$j.id}"><i class="glyphicon glyphicon-user profilei"></i></a>
+                            <a href="usergroups.php?act=viewgroup&id={$j.id}"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a data-id="{$j.id}" href="usergroups.php?act=dodel" id="delbuttongroup"><i class="glyphicon glyphicon-trash deli"></i></a>
+                            </td>
+                            </tr>
+                                {/foreach}
+                            </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+           </div><!-- /.col--> 
+
+		</div>
+{include file="messagessend.html"}
+		
+		
+		
+		
+								
+
+

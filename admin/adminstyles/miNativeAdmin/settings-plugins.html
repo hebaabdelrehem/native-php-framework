@@ -1,0 +1,102 @@
+{include file="head.html"}
+<ol class="breadcrumb">
+	<li>
+		<a href="#"><span class="glyphicon glyphicon-home"></span></a>
+	</li>
+	<li class="">
+		Settings
+	</li>
+	<li class="active">
+		Plugins Settings
+	</li>
+</ol>
+</div><!--/.row-->
+
+<div class="row">
+	<div class="col-lg-12">
+		{include file='messages.html'}
+
+	</div>
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Plugins settings <i class="glyphicon glyphicon-chevron-right" style="margin-right:0px !important;font-size: 14px"></i>
+						
+						{if isset($setgroup)}
+						
+						{if !empty($hooks->add_Settings)}
+							{foreach from=$hooks->add_Settings item=i}
+							{if $setgroup == {$i.groupname}}
+							{$i.title}
+							{/if}
+							{/foreach}
+							{/if}
+
+						{else}
+						Choose plugin settings
+						{/if}
+
+						<button type="button" class="btn btn-primary pull-right menus-but" onClick="location.href='settings.php?setgroup=all'">
+							<i class="glyphicon glyphicon-cog "></i> All main settings
+						</button>
+						
+					</div>
+					<div class="col-md-3">
+
+						<div class="headingcust" style="margin-top: 15px">
+							<i class="glyphicon glyphicon-th-list"></i> Plugins settings list
+						</div>
+						<ul class="todo-list settinglist">
+							
+							{if !empty($hooks->add_Settings)}
+
+							{foreach from=$hooks->add_Settings item=i}
+							<a href="{$i.url}">
+							<li class="todo-list-item">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding"><i class="glyphicon glyphicon-font"></i>{$i.title}</label>
+								</div>
+							</li>
+							</a>
+							{/foreach}
+							{/if}
+
+						</ul>
+					</div>
+
+					<div class="col-md-9">
+						<div class="panel-body panelbodyedit tabssty">
+							{if isset($setgroup)}
+							{if !empty($hooks->add_SettingsTpl)}
+
+							{foreach from=$hooks->add_SettingsTpl item=i}
+							{if $setgroup == {$i.setgroupname}}
+							
+							{include {$i.tpl}}
+							
+							{/if}
+							{/foreach}
+							
+							{/if}
+							{else}
+							<div class="alert bg-primary" role="alert">
+							<span class="glyphicon glyphicon-info-sign"></span> Choose plugin settings
+			
+							</div>
+							{/if}
+							
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+

@@ -1,0 +1,319 @@
+{include file="head.html"}
+<ol class="breadcrumb">
+	<li>
+		<a href="#"><span class="glyphicon glyphicon-home"></span></a>
+	</li>
+	<li class="">
+		Users
+	</li>
+	<li class="active">
+		Viewing user
+	</li>
+</ol>
+
+<div class="row">
+	<div class="col-lg-12">
+		{include file='messages.html'}
+
+	</div>
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Viewing user: #{$userid} - {$name}
+						<button type="button" class="btn btn-primary pull-right menus-but" onClick="location.href='users.php?act=list'">
+							<i class="glyphicon glyphicon-cog "></i> Manage users
+						</button>
+
+						<a data-id="{$userid}" href="users.php?act=dodel" id="delbutton" class="btn btn-danger pull-right menus-but"> <i class="glyphicon glyphicon-trash"></i> Remove user </a>
+						<button type="button" class="btn btn-info pull-right menus-but" onClick="location.href='usergroups.php?act=list'">
+							<i class="glyphicon glyphicon-eye-open "></i> View profile
+						</button>
+					</div>
+					<div class="col-md-7">
+						<div class="panel-body">
+							<div class="headingcust">
+								<i class="glyphicon glyphicon-user"></i> Basic User details
+							</div>
+
+							<form role="form" id="updateuser" name="updateuser" action="users.php">
+								<input type="hidden" class="form-control" id="userid" placeholder="" name="userid" value="{$userid}">
+
+								<div class="col-md-6 formindex">
+									<div class="form-group">
+										<label for="name">Name</label>
+										<input type="name" class="form-control" id="name" placeholder="" name="name" value="{$name}">
+									</div>
+
+									<div class="form-group">
+										<label for="user">Username</label>
+										<input type="user" class="form-control" id="user" placeholder="" name="user" value="{$user}">
+									</div>
+									<div class="form-group">
+										<label for="dname">Display name</label>
+										<input type="dname" class="form-control" id="dname" placeholder="" name="dname" value="{$dname}">
+									</div>
+									<div class="form-group">
+										<label for="country">Country</label>
+										<select name="country" class="form-control">
+											{foreach from=$data item=i key=key}
+											<option value="{$i.id}" {if $country eq $i.id}selected{/if}>{$i.nicename}</option>
+											{/foreach}
+										</select>
+									</div>
+								</div>
+								<div class="col-md-6 formindex">
+									<div class="form-group">
+										<label>Email</label>
+										<input class="form-control" placeholder="" value="{$email}" name="email">
+									</div>
+									<div class="form-group">
+										<label>Password</label>
+										<input class="form-control" placeholder="" value="" name="password">
+
+									</div>
+
+									<div class="form-group">
+										<label for="sex">Gender</label>
+										<select name="sex" class="form-control">
+											<option {if $sex eq 1}selected{/if} value="1">Male</option>
+											<option {if $sex eq 2}selected{/if} value="2">Female</option>
+
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="city">City/State</label>
+										<input type="city" class="form-control" id="city" placeholder=""  name="city" value="{$city}">
+									</div>
+								</div>
+								<div style="clear: both"></div>
+								<div class="headingcust">
+									<i class="glyphicon glyphicon-zoom-in"></i> Social details
+								</div>
+								<div class="col-md-6 formindex">
+								<div class="form-group">
+
+									<label>Facrbook</label>
+
+									<input class="form-control" placeholder="" value="{$face}" name="face">
+
+								</div>
+
+								<div class="form-group">
+
+									<label>Twitter</label>
+
+									<input class="form-control" placeholder="" value="{$twitter}" name="twitter">
+
+								</div>
+
+								<div class="form-group">
+
+									<label>Google+</label>
+
+									<input class="form-control" placeholder="" value="{$google}" name="google">
+
+								</div>
+
+								<div class="form-group">
+
+									<label>Linkedin</label>
+
+									<input class="form-control" placeholder="" value="{$linkedin}" name="linkedin">
+
+								</div>
+								</div>
+								<div class="col-md-6 formindex">
+								<div class="form-group">
+
+									<label>Skype</label>
+
+									<input class="form-control" placeholder="" value="{$skype}" name="skype">
+
+								</div>
+								<div class="form-group">
+
+									<label>Yahoo</label>
+
+									<input class="form-control" placeholder="" value="{$yahoo}" name="yahoo">
+
+								</div>
+
+								<div class="form-group">
+
+									<label>Website</label>
+
+									<input class="form-control" placeholder="" value="{$website}" name="website">
+
+								</div>
+								</div>
+								<div style="clear: both"></div>
+								<div class="headingcust">
+									<i class="glyphicon glyphicon-book"></i> Biography
+								</div>
+								<div class="col-md-12 formindex">
+									
+								<div class="form-group">
+
+									<label>Biography</label>
+									<textarea class="form-control" rows="6" name="bio">{$bio}</textarea>
+																																							
+  
+
+								</div>
+								</div>
+								<div class="col-md-12 tcenter settingbutdiv">
+									<button type="submit" class="btn btn-primary" id="submit">
+										Submit
+									</button>
+									<button type="reset" class="btn btn-default">
+										Reset
+									</button>
+								</div>
+							</form>
+						</div>
+
+					</div>
+
+					<div class="col-md-3">
+
+						<div class="headingcust" style="margin-top: 15px">
+							<i class="glyphicon glyphicon-picture"></i> User avator
+						</div>
+						<img src="../contents/avators/{$avatar}" class="avatorpic">
+						<form role="form" class="form-horizontal" id="changeavator">
+							<div class="form-group" style="margin-bottom: 0px !important">
+								<div class="col-lg-12">
+									<label>Change avator</label>
+								</div>
+
+								<div class="col-lg-8 tcenter">
+									<input type="hidden" value="{$userid}" name="userid" />
+									<input type="file" name="file" />
+								</div>
+
+								<div class="col-lg-4 tcenter">
+									<button type="submit" class="btn btn-primary" id="submit5">
+										Upload
+									</button>
+								</div>
+
+							</div>
+							<div class="changeres tcenter"></div>
+						</form>
+
+					</div>
+
+					<div class="col-md-2">
+						<div class="headingcust" style="margin-top: 15px">
+							<i class="glyphicon glyphicon-flag"></i> Unchangable data
+						</div>
+						<div class="form-group">
+							<label>Registration date</label>
+							<input class="form-control" value="{$reg_date}" disabled="">
+						</div>
+
+						<div class="form-group">
+							<label>Last login</label>
+							<input class="form-control" value="{$last_login}" disabled="">
+						</div>
+
+						<div class="form-group">
+							<label>IP address</label>
+							<input class="form-control" value="{$ip_add}" disabled="">
+						</div>
+
+						<div class="form-group">
+							<label>User agent</label>
+							<input class="form-control" value="{$user_agent}" disabled="">
+						</div>
+					</div>
+					<div class="col-md-5" style="margin-bottom: 16px">
+						<div class="headingcust">
+							<i class="glyphicon glyphicon-envelope"></i> User messages
+						</div>
+						<table class="table table-condensed tablet bluetablehead" data-toggle="table"  data-select-item-name="toolbar1">
+							<thead >
+								<tr>
+									<th></th>
+									<th>Title</th>
+									<th>Date</th>
+									<th>Seen</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								{foreach from=$messdata item=s}
+								<tr>
+									<td  class=""> {if $s.status eq 1}<i class="glyphicon glyphicon-lock red"></i> {else}<i class="glyphicon glyphicon-flag green"></i> {/if} </td>
+									<td>{$s.title}</td>
+									<td>{$s.date}</td>
+									<td>{if $s.seen eq 1}<i class="glyphicon glyphicon-ok green"></i> {else}<i class="glyphicon glyphicon-remove red"></i> {/if}</td>
+									<td class=""><a href="forms.php?act=viewmessage&formid={$s.formid}&hash={$s.hash}"><i class="glyphicon glyphicon-envelope seemessag"></i></a><a data-id="{$s.id}" data-formid="{$i.formid}" href="forms.php?act=dellmessage" id="dellmessage"><i class="glyphicon glyphicon-trash deli"></i></a></td>
+								</tr>
+								{/foreach}
+							</tbody>
+						</table>
+
+					</div>
+					<div class="col-md-5">
+						<div class="headingcust">
+							<i class="glyphicon glyphicon-cog"></i> Admin Actions
+						</div>
+						<form role="form" class="form-horizontal" id="changeusergroup">
+							<div class="form-group">
+								<div class="col-lg-12">
+									<label>User Group</label>
+								</div>
+								<input type="hidden" value="{$userid}" name="userid" />
+								<div class="col-lg-8 tcenter">
+									<select name="groupid" class="form-control">
+										{foreach from=$datagroup item=i key=key}
+										<option value="{$i.id}" {if $group eq $i.id}selected{/if}>{$i.groupname}</option>
+										{/foreach}
+									</select>
+								</div>
+
+								<div class="col-lg-4 changegrdiv tcenter">
+									<button type="submit" class="btn btn-primary">
+										Change
+									</button>
+								</div>
+
+							</div>
+						</form>
+					</div>
+					<div class="col-md-5">
+						<form role="form" class="form-horizontal" id="updateuser" name="updateuser" action="users.php">
+							<div class="form-group">
+								<div class="col-lg-12">
+									<label>Send Message</label>
+								</div>
+
+								<div class="col-lg-8">
+									<select class="form-control">
+										<option value="1">Mail 1</option>
+										<option value="0">Mail 2</option>
+									</select>
+								</div>
+
+								<div class="col-lg-4 tcenter">
+									<button type="submit" class="btn btn-primary" id="changegroup">
+										Send
+									</button>
+								</div>
+							</div>
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+

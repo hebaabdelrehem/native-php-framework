@@ -1,0 +1,41 @@
+{include file="head.html"}
+<ol class="breadcrumb">
+	<li>
+		<a href="#"><span class="glyphicon glyphicon-home"></span></a>
+	</li>
+
+	<li class="">
+		Error Page
+	</li>
+</ol>
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						{if $error eq 'disabled'}
+						Action disabled
+						{/if}
+					</div>
+
+					<div class="col-md-12 errorpagealert">
+
+						<div class="alert alert-danger" role="alert">
+							{if $error eq 'disabled'}
+							<h3><i class="glyphicon glyphicon-remove"></i> Sorry, this action is disabled right now.</h3><br>
+							
+							You can activate it from settings.
+							<br>
+							Thank you.
+							{/if}
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

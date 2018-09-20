@@ -1,0 +1,309 @@
+{include file="head.html"}
+<ol class="breadcrumb">
+	<li>
+		<a href="#"><span class="glyphicon glyphicon-home"></span></a>
+	</li>
+
+	<li class="">
+		Pages Manager
+	</li>
+	<li class="active">
+		Add new page
+	</li>
+</ol>
+
+<div class="row">
+	<div class="col-lg-12">
+		{include file='messages.html'}
+
+	</div>
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Adding new page
+					</div>
+
+					<div class="col-md-9">
+						<div class="panel-body tabssty">
+
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active">
+									<a href="#en" aria-controls="english" role="tab" data-toggle="tab">English</a>
+								</li>
+								{foreach from=$languages item=language key=i}
+								{if $language.langcode != 'en'}
+								<li role="presentation">
+									<a href="#{$language.name}" aria-controls="{$language.name}" role="tab" data-toggle="tab">{$language.name} </a>
+								</li>
+								{/if}
+								{/foreach}
+							</ul>
+							<form role="form" id="addnewpage" name="addnewpage" action="" enctype="multipart/form-data">
+								<div class="tab-content">
+									<div role="tabpanel" class="tab-pane active" id="en">
+										<div class="headingcust">
+											English Page details
+										</div>
+
+										<div class="form-group">
+											<label>Page title</label>
+											<input class="form-control" placeholder="" name="pagetitle">
+											<dfn>The main title of the page that will viewed to users.</dfn>
+										</div>
+										<div class="form-group">
+											<label>Page brief</label>
+											<textarea class="form-control" rows="3" name="pagebrief"></textarea>
+											<dfn>The page content that will viewed to user</dfn>
+										</div>
+										<div class="form-group">
+											<label>Page content</label>
+											<textarea class="form-control" rows="15" name="pagecontent" {if $pmangeditor}id="textareatiny0"{/if}></textarea>
+											<dfn>The page content that will viewed to user</dfn>
+										</div>
+									<div style="clear: both"></div>
+									<div class="headingcust">
+										Search engine
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Meta discription</label>
+											<input class="form-control" placeholder="" type="text" name="pagemetadisc">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Meta Keywords</label>
+											<input class="form-control" placeholder="" type="text" name="pagemetakey">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<div class="form-group">
+												<label>Tags</label>
+												<input class="form-control" placeholder="" type="text" name="pagetags">
+												<dfn>The main title of the page</dfn>
+											</div>
+										</div>
+									</div>
+									</div>
+
+									{foreach from=$languages item=language key=i}
+									{if $language.langcode != 'en'}
+									<div role="tabpanel" class="tab-pane" id="{$language.name}">
+										<div class="headingcust">
+											{$language.name} Page details
+										</div>
+
+										<input class="form-control" placeholder="" name="lang[]" value="{$language.langcode}" type="hidden">
+										<div class="form-group">
+											<label>Page title</label>
+											<input class="form-control" placeholder="" name="pagetitle{$language.langcode}">
+											<dfn>The main title of the page</dfn>
+										</div>
+										<div class="form-group">
+											<label>Page brief</label>
+											<textarea class="form-control" rows="3" name="pagebrief{$language.langcode}"></textarea>
+											<dfn>The page content that will viewed to user</dfn>
+										</div>
+										<div class="form-group">
+											<label>Page content</label>
+											<textarea class="form-control" rows="15" name="pagecontent{$language.langcode}" {if $pmangeditor}id="textareatiny{$i}"{/if}></textarea>
+											<dfn>The main title of the page</dfn>
+										</div>
+										<div style="clear: both"></div>
+									<div class="headingcust">
+										Search engine
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Meta discription</label>
+											<input class="form-control" placeholder="" type="text" name="pagemetadisc{$language.langcode}">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Meta Keywords</label>
+											<input class="form-control" placeholder="" type="text" name="pagemetakey{$language.langcode}">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<div class="form-group">
+												<label>Tags</label>
+												<input class="form-control" placeholder="" type="text" name="pagetags{$language.langcode}">
+												<dfn>The main title of the page</dfn>
+											</div>
+										</div>
+									</div>
+									</div>
+									
+									{/if}
+									{/foreach}
+									
+									<div style="clear: both"></div>
+									<div class="headingcust">
+										Page options
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Writer name</label>
+											<input class="form-control" placeholder="" type="text" name="pagewriter">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Publish date</label>
+											<input class="form-control" placeholder="" type="date" name="pagepubdate">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Status</label>
+											<select class="form-control" name="status">
+												<option value="1">Enabled</option>
+												<option value="0">Disabled</option>
+											</select>
+											<dfn>The main title of the page</dfn>
+										</div>
+
+									</div>
+									{if $pmangattachment}
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Attach file</label>
+											<input class="form-control" placeholder="" type="file" name="pagefile">
+										</div>
+									</div>
+									
+									<div class="col-md-8">
+										<div class="alert bg-primary" role="alert" style="margin-top: 11px;">
+											<span class="glyphicon glyphicon-info-sign"></span> Pages attachment folder is: "../contents/pages"
+
+										</div>
+									</div>
+									{/if}
+									<div style="clear: both"></div>
+									<div class="headingcust">
+										Page privacy
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Page privacy</label>
+											<select class="form-control" name="pageprivacy">
+												<option value="pub">Public - (Visitors and users)</option>
+												<option value="pri">Private - (Registered users)</option>
+												<option value="ris">Ristrected - (Spacific users group)</option>
+											</select>
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Ristrected to</label>
+											<select class="form-control" name="pagerestrto">
+												{foreach from=$datagroup item=i key=key}
+
+												<option value="{$i.id}" style="color: {$i.color} !important">{$i.groupname}</option>
+												{/foreach}
+											</select>
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div style="clear: both"></div>
+									<div class="headingcust">
+										Add a menu link
+									</div>
+
+									<div class="col-md-4">
+										<div class="form-group" style="padding-bottom: 29px">
+											<label>Add a link to a menu</label>
+											<label class="switch switch-left-right" style="margin: 0 auto;top: 5px">
+												<input class="switch-input" type="checkbox" checked value="1" onchange="pageaddlinkaa.value=value"/>
+												<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+											<input name="pageaddlink" id="pageaddlinkaa" value="1" type="hidden"/>
+
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Choose menu</label>
+											<select class="form-control" name="pagemenu">
+												{foreach from=$menus item=menu key=j}
+												{if $menu.url eq '#'}
+												<option value="{$menu.id}">{$menu.name}</option>
+												{/if}
+												{/foreach}
+											</select>
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Link title</label>
+											<input class="form-control" placeholder="" type="text" name="pagelinkname">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-12 tcenter settingbutdiv">
+										<div style="padding:5px;display: inline-block;">
+											Other languages to add :
+											{foreach from=$languages item=language key=i}
+											{if $language.langcode != 'en'}
+											{$language.name}
+											<input type="checkbox" name="langup[]" value="{$language.langcode}">
+											{/if}
+											{/foreach}
+										</div>
+
+										<button type="submit" class="btn btn-primary" id="submit">
+											Add page
+										</button>
+										<button type="reset" class="btn btn-default">
+											Reset
+										</button>
+									</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-3">
+					<div class="headingcust"  style="margin-top: 15px">
+						<i class="glyphicon glyphicon-user"></i> Curently pages
+					</div>
+					{foreach from=$pagedata item=i key=key}
+
+					<i class="glyphicon glyphicon-hand-right"></i>
+					<a href="pagemanager.php?act=viewpage&id={$i.id}"> {$i.pagetitle|truncate:25:"...":true} </a>
+					<span class="pull-right"> {if $i.status eq 0}
+						Disabled
+						{else}
+						Active
+						{/if} </span>
+					<div class="divider2"></div>
+					{/foreach}
+					<div class="col-md-12 tcenter" style="margin-top:20px">
+
+						<button type="button" class="btn btn-info" onClick="location.href='pagemanager.php?act=list'" >
+							Manage pages
+						</button>
+						<br>
+						<br>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+

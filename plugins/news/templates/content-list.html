@@ -1,0 +1,109 @@
+{include file="file:[11]head.html"} <script src="js/news.js"></script>
+
+<ol class="breadcrumb">
+	<li>
+		<a href="#"><span class="glyphicon glyphicon-home"></span></a>
+	</li>
+
+	<li class="">
+		News
+	</li>
+	<li class="active">
+		Sections
+	</li>
+</ol>
+
+<div class="row">
+	<div class="col-lg-12">
+		{include file='file:[11]messages.html'}
+
+	</div>
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						'{$sectionName}' Contents
+						<div class="pluginhead">
+							News Plugin
+						</div>
+						<button type="button" class="btn btn-primary pull-right menus-but" onClick="location.href='news.admin.php?act=addSection'">
+							<i class="glyphicon glyphicon-plus "></i> Add new content
+						</button>
+
+					</div>
+					<div class="col-md-9">
+						<div class="panel-body">
+							
+							<table class="table table-condensed tablet" data-toggle="table" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="id" data-sort-order="asc">
+								<thead class="">
+									<tr>
+										<th data-field="state" data-checkbox="true">ID</th>
+										
+										<th>News picture</th>
+										<th>Title</th>
+										<th>Brief</th>
+										
+										<th>Publish date</th>
+										<th>Type</th>
+										<th>Actions</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									{foreach from=$contentsData item=i key=key}
+									<tr>
+										<td>{$i.id}</td>
+										
+										<td>{if $i.newsFiles != ' '} <img src="../../contents/news/{$i.newsFiles}" style="width:100px;height: 70px;" /> {else}No Pictures{/if}</td>
+
+										<td>{$i.newsTitle}</td>
+										<td>{$i.newsBrief|truncate:100:" ...":true}</td>
+										
+										<td>{$i.newsPubDate}</td>
+										<td>{if $i.newsType eq 'st'}Sticky{elseif $i.newsType eq 'imp'}Important{else}Normal{/if}</td>
+										<td class="widthplu"><a href="news.admin.php?act=editSection&id={$i.id}"> <i class="glyphicon glyphicon-cog"></i></a><a data-id="{$i.id}" href="news.admin.php?act=dodel" id="delSection"> <i class="glyphicon glyphicon-trash deli"></i></a></td>
+									</tr>
+									{/foreach}
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+					<div class="col-md-3">
+
+						<div class="headingcust"   style="margin-top: 15px">
+							Section details
+						</div>
+
+						<div class="col-md-12 panalinfodata">
+							<span><h4>Section Picture</h4></span>
+							<div class="tcenter">
+								{if $sectionPicture != ' '}
+
+								<img src="../../contents/news/{$sectionPicture}"/>
+
+								{else}No Pictures{/if}
+							</div>
+
+							<span><h4>Section description</h4></span> {$sectionDescrip} 
+							<span><h4>Meta discription</h4></span> {$sectionMetadisc} 
+							<span><h4>Meta Keywords</h4></span> {$sectionMetakey} 
+							<span><h4>Tags</h4></span> {$sectionTags}
+							
+							<div class="tcenter actions">
+								<button type="button" class="btn btn-primary menus-but" onClick="location.href='news.admin.php?act=editSection&id={$id}'">
+									<i class="glyphicon glyphicon-cog  "></i> Edit section
+								</button>
+							</div>
+							
+						</div>
+						
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,242 @@
+<div class="headingcust">
+	<i class="glyphicon glyphicon-cog"></i> Main center settings
+</div>
+<form role="form" class="form-horizontal" id="updatesettings" name="updatesettings" action="settings.php?act=edit">
+	<input type="hidden" value="ccentersettings" name="group" />
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable messages menu in header</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $ccentermenuhead == "1"}checked{/if} value="{if $ccentermenuhead == "1"}0{else}1{/if}" onchange="ccentermenuhead.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="ccentermenuhead" id="ccentermenuhead" value="{$ccentermenuhead}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable messages list in usercp</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $ccenterlistusercp == "1"}checked{/if} value="{if $ccenterlistusercp == "1"}0{else}1{/if}" onchange="ccenterlistusercp.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> 
+				<input name="ccenterlistusercp" id="ccenterlistusercp" value="{$ccenterlistusercp}" type="hidden"/>
+				</label>
+			<dfn>Refuse to repeat email address for more than one user during registration process.</dfn>
+			
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Message title maximum letters</label>
+			<output id="rangevalueaaa" style="display: inline;float: right">
+				{$ccentermesslett} letter
+			</output>
+			<input value="{$ccentermesslett}" type = "range" min="5" max="40" onchange="rangevalueaaa.value=value" name="ccentermesslett"/>
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Attachments
+	</div>
+	<div class="col-md-6 settingdiv">
+
+		<div class="form-group">
+			<label>Allow attachment on message submit</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $attachmentmess == "1"}checked{/if} value="{if $attachmentmess == "1"}0{else}1{/if}" onchange="attachmentmess.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> 
+				<input name="attachmentmess" id="attachmentmess" value="{$attachmentmess}" type="hidden"/>
+				</label>
+			<dfn>Allow users to upload profile picture.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+
+		<div class="form-group">
+			<label>Allow attachment on reply submit</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $attachmentreply == "1"}checked{/if} value="{if $attachmentreply == "1"}0{else}1{/if}" onchange="attachmentreply.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> 
+				<input name="attachmentreply" id="attachmentreply" value="{$attachmentreply}" type="hidden"/>
+				</label>
+			<dfn>Allow users to upload profile picture.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Maximum nubmer of attached files</label>
+			<output id="ccenterattachmentnumberaa" style="display: inline;float: right">
+				{$ccenterattachmentnumber} file
+			</output>
+			<input value="{$ccenterattachmentnumber}" type = "range" min="1" max="10" onchange="ccenterattachmentnumberaa.value=value" name="ccenterattachmentnumber"/>
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Allowed attachment size</label>
+			<output id="ccenterattachmentsizeaa" style="display: inline;float: right">
+				{$ccenterattachmentsize} MB
+			</output>
+			<input value="{$ccenterattachmentsize}" type = "range" min="1" max="20" onchange="ccenterattachmentsizeaa.value=value" name="ccenterattachmentsize"/>
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-12 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Allowed attachmet types</label>
+			<input class="form-control" placeholder="" value="{$ccenterattachmenttypes}" name="ccenterattachmenttypes">
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+
+	</div>
+	<div class="col-md-12">
+		<div class="alert bg-primary" role="alert">
+			<span class="glyphicon glyphicon-info-sign"></span> Contant center attachment folder is: "../contents/ccenter"
+
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Notifications ( By email )
+	</div>
+
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Notify 'administraor' and 'user' on <b>message</b> submit</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $ccenternotifymess == "1"}checked{/if} value="{if $ccenternotifymess == "1"}0{else}1{/if}" onchange="ccenternotifymess.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="ccenternotifymess" id="ccenternotifymess" value="{$ccenternotifymess}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Notify 'administraor' and 'user' on <b>reply</b> submit</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $ccenternotifyreply == "1"}checked{/if} value="{if $ccenternotifyreply == "1"}0{else}1{/if}" onchange="ccenternotifyreply.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> 
+				<input name="ccenternotifyreply" id="ccenternotifyreply" value="{$ccenternotifyreply}" type="hidden"/>
+				</label>
+			<dfn>Refuse to repeat email address for more than one user during registration process.</dfn>
+			
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Use Editor
+	</div>
+
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Use editor on message submit</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $ccentereditorymess == "1"}checked{/if} value="{if $ccentereditorymess == "1"}0{else}1{/if}" onchange="ccentereditorymess.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="ccentereditorymess" id="ccentereditorymess" value="{$ccentereditorymess}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Use editor on reply submit</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $ccentereditoryreply == "1"}checked{/if} value="{if $ccentereditoryreply == "1"}0{else}1{/if}" onchange="ccentereditoryreply.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> 
+				<input name="ccentereditoryreply" id="ccentereditoryreply" value="{$ccentereditoryreply}" type="hidden"/>
+				</label>
+			<dfn>Refuse to repeat email address for more than one user during registration process.</dfn>
+			
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Automatic reply with new messages
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 129px">
+			<label>Submit automatic reply with new messages</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $ccenterautoreplyen == "1"}checked{/if} value="{if $ccenterautoreplyen == "1"}0{else}1{/if}" onchange="ccenterautoreplyen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="ccenterautoreplyen" id="ccenterautoreplyen" value="{$ccenterautoreplyen}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Automatic new message reply</label>
+
+			<textarea class="form-control" rows="6" name="ccenterautoreply">{$ccenterautoreply}</textarea>		
+			<dfn>The content of the default email header.</dfn>
+
+			
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Message closing
+	</div>
+	
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 29px">
+			<label>Close message automatic</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $ccentercloseauto == "1"}checked{/if} value="{if $ccentercloseauto == "1"}0{else}1{/if}" onchange="ccentercloseauto.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="ccentercloseauto" id="ccentercloseauto" value="{$ccentercloseauto}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Time to close message</label>
+			<output id="ccentercloseautotimeaa" style="display: inline;float: right">
+				{$ccentercloseautotime} Hour
+			</output>
+			<input value="{$ccentercloseautotime}" type = "range" min="12" max="72" onchange="ccentercloseautotimeaa.value=value" name="ccentercloseautotime"/>
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 129px">
+			<label>Submit automatic closing reply</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $ccentercloseautoreplyen == "1"}checked{/if} value="{if $ccentercloseautoreplyen == "1"}0{else}1{/if}" onchange="ccentercloseautoreplyen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="ccentercloseautoreplyen" id="ccentercloseautoreplyen" value="{$ccentercloseautoreplyen}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Automatic message closing reply</label>
+
+			<textarea class="form-control" rows="6" name="ccentercloseautoreply">{$ccentercloseautoreply}</textarea>		
+			<dfn>The content of the default email header.</dfn>
+
+			
+		</div>
+	</div>
+
+	<div class="col-md-12 tcenter settingbutdiv">
+		<button type="submit" class="btn btn-primary" id="submit">
+			Update
+		</button>
+	</div>
+</form>

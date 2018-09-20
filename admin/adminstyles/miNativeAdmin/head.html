@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<link href="{$scripturl}admin/adminstyles/{$adminmainstyle}/css/bootstrap.min.css" rel="stylesheet">
+		<link href="{$scripturl}admin/adminstyles/{$adminmainstyle}/css/datepicker3.css" rel="stylesheet">
+		<link href="{$scripturl}admin/adminstyles/{$adminmainstyle}/css/styles.css" rel="stylesheet">
+
+		<script src="{$scripturl}admin/js/jquery-1.11.1.min.js"></script>
+		<script src="{$scripturl}admin/js/jquery-ui.min.js"></script>
+		<script src="{$scripturl}admin/adminstyles/{$adminmainstyle}/js/bootstrap.min.js"></script>
+		<script src="{$scripturl}admin/adminstyles/{$adminmainstyle}/js/chart.min.js"></script>
+		<script src="{$scripturl}admin/adminstyles/{$adminmainstyle}/js/chart-data.js"></script>
+		<script src="{$scripturl}admin/adminstyles/{$adminmainstyle}/js/easypiechart.js"></script>
+		<script src="{$scripturl}admin/adminstyles/{$adminmainstyle}/js/easypiechart-data.js"></script>
+		<script src="{$scripturl}admin/adminstyles/{$adminmainstyle}/js/bootstrap-datepicker.js"></script>
+
+		<script src="{$scripturl}admin/adminstyles/{$adminmainstyle}/js/bootstrap-table.js"></script>
+		<script type="text/JavaScript" src="{$scripturl}js/sha512.js"></script>
+		<script type="text/JavaScript" src="{$scripturl}js/forms.js"></script>
+
+		<!-- tiymcse -->
+		<script language="javascript" type="text/javascript" src="{$scripturl}js/tinymce/tinymce.min.js"></script>
+
+		<link href="{$scripturl}admin/adminstyles/{$adminmainstyle}/css/bootstrap-table.css" rel="stylesheet">
+		<script src="{$scripturl}admin/jquery.validate.min.js"></script>
+		<script src="{$scripturl}admin/main.js"></script>
+
+
+		{if !empty($hooks->add_Js)}
+		{foreach from=$hooks->add_Js item=i}
+		
+		<script src="{$i.file}"></script>
+		{/foreach}
+		{/if}
+
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<meta charset="UTF-8">
+		<title>{$sitename} - {$pagetitle}</title>
+	</head>
+
+	<body>

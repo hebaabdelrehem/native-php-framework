@@ -1,0 +1,151 @@
+ {include file="head.html"}
+			<ol class="breadcrumb">
+				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li class="">Menus Maker</li>
+                <li class="active">Menus List</li>
+			</ol>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+                {include file='messages.html'}
+				
+			</div>
+             <div class="col-lg-12">
+<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Menus List : You have ({$count} menu)
+					<a data-id="{$i.id}" data-status="1" href="menus.php?act=addmenu" class="btn btn-primary pull-right">
+                                    <i class="glyphicon glyphicon-plus "></i> Add new menu</a>	
+						</div>
+					<div class="panel-body" style="margin-bottom: 20px;padding-top:0px">
+						{foreach $menus_places item=f key=key}
+						<div class="headingcust2">
+						{$f}
+						</div>
+						<table class="table table-condensed tablet" data-toggle="table" data-sort-name="place" data-sort-order="asc">
+						    <thead class="">
+						    <tr>
+                                <th data-field="state" data-checkbox="true">ID</th>
+						        <th>ID</th>
+						        <th>Name</th>
+						        <th>Parent</th>
+						        <th>Url</th>
+                                <th>Type</th>
+                                <th>Place</th>
+                                <th>Childs</th>
+                                <th>Order</th>
+                                <th>Status</th>
+                                
+                                <th>Actions</th>
+						    </tr>
+						    </thead>
+                            <tbody>
+                                {foreach from=$menusdata item=i key=key}
+                                {if $i.place eq $f}
+                            <tr>
+                            <td>{$i.id}</td>
+                            <td>{$i.id}</td>
+                            <td>{$i.name}</td>
+                            <td>{if $i.parent eq 0} No parent {else} {$i.parent} {/if}</td>
+                            <td>{$i.url}</td>
+                            <td>{$i.type}</td>
+                            <td>{$i.place}</td>
+                             <td>{if $i.type != 'link'}<a href="menus.php?act=viewmenu&id={$i.id}" >
+                           	<i class="glyphicon glyphicon-list" style="margin-right: 0px !important"></i></a>{/if}
+                            </td>
+                            <td>{$i.order}</td>
+                           <td>{if $i.status eq 1}<i class="glyphicon glyphicon-ok green"></i> Active {else}<i class="glyphicon glyphicon-remove red"></i> Not Active {/if}</td>
+                            <td>
+                            {*<a data-toggle="modal" class="editmenu" data-id="{$i.id}" data-name="{$i.name}" data-type="{$i.type}" data-place="{$i.place}" data-url="{$i.url}" data-order="{$i.order}" data-status="{$i.status}" href="#myModal"></a>*}    
+							<a href="menus.php?act=editmenu&menuid={$i.id}"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a data-id="{$i.id}" href="menus.php?act=dodel" id="delbuttonmenu"><i class="glyphicon glyphicon-trash deli"></i></a>
+                            </td>
+                            </tr>
+                            {/if}
+                                {/foreach}
+                            </tbody>
+						</table>
+						{/foreach}
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+           </div>
+</div>
+
+{*<div style="right: 23% !important" class="modal fade bs-example-modal-sm loginmod " id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content menuedit">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><i class="glyphicon glyphicon-cog"></i> Edit Menu</h4>
+        <div id="modelactionedit" class="tcenter"></div>
+      </div>
+      <div class="modal-body">
+        <form method="post" id="editmenuchild" action="" name="">
+        	<div class="col-lg-6">
+          						<div class="form-group">
+									<label>Menu title</label>
+									<input class="form-control" placeholder="" name="childname" id="childname">
+									<input type="hidden" name="id" id="id">
+								</div>
+								<div class="form-group">
+									<label>Parent</label>
+									<input type="hidden" id="parent">
+									<select class="form-control" name="parent" id="parent">
+										<option value="0">No parent</option>
+										{foreach from=$menusdata item=a key=key}
+			                            <option value="{$a.id}" {if {$a.id} eq {$i.parent}} selected {/if}>{$a.name}</option>
+			                            {/foreach}
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Type</label>
+									<input class="form-control"id="type">
+									<select class="form-control" name="type" id="type">
+										{foreach from=$menus_types item=f key=key}
+			                            <option value="{$f}" {if {$f} eq {$i.type}} selected {/if}>{$f}</option>
+			                            {/foreach}
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Place</label> 
+									<input class="form-control" id="place">
+									<select class="form-control" name="place" id="place">
+										{foreach from=$menus_places item=s key=key}
+			                            <option value="{$s}" {if {$s} eq {$i.place}} selected {/if} id="place">{$s}</option>
+			                            {/foreach}
+									</select>
+								</div>
+								</div>
+								<div class="col-lg-6">
+								
+								<div class="form-group">
+									<label>Url</label>
+									<input class="form-control" placeholder="" name="url" value="#" id="url">
+								</div>
+                                
+								<div class="form-group">
+									<label>Order</label>
+									<input class="form-control" placeholder="" name="order" id="order">
+								</div>
+								 <div class="form-group">
+									<label>Status</label>
+									<select class="form-control" name="status" id="status">
+										<option value="1">Active</option>
+										<option value="0">Not active</option>
+									</select>
+								</div>
+								</div>
+								<div style="clear: both"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" id="submit2">Edit</button>
+      </div>
+          </form>
+    </div>
+  </div>
+</div>*}

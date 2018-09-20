@@ -1,0 +1,175 @@
+
+<div class="headingcust">
+	<i class="glyphicon glyphicon-cog"></i> Main registration settings
+</div>
+<form role="form" class="form-horizontal" id="updatesettings" name="updatesettings" action="settings.php?act=edit">
+	<input type="hidden" value="regsettings" name="group" />
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable registration</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $enablereg == "1"}checked{/if} value="{if $enablereg == "1"}0{else}1{/if}" onchange="enableregvalue.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="enablereg" id="enableregvalue" value="{$enablereg}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+
+		<div class="form-group">
+			<label>Unique email</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $uniqueemail == "1"}checked{/if} value="{if $uniqueemail == "1"}0{else}1{/if}" onchange="uniqueemail.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<dfn>Refuse to repeat email address for more than one user during registration process.</dfn>
+			<input name="uniqueemail" id="uniqueemail" value="{$uniqueemail}" type="hidden"/>
+		</div>
+
+		<div class="form-group">
+			<label>Unique username</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $uniqueusername == "1"}checked{/if} value="1" name="uniqueusername"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<dfn>Refuse to repeat username for more than one user during registration process.</dfn>
+
+		</div>
+
+		<div class="form-group">
+			<label>Disabled usernames</label>
+
+			<input class="form-control" placeholder="" value="{$disabledusernames}" name="disabledusernames">
+			<dfn>Usernames that not allawed to be registered with.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+
+		<div class="form-group">
+			<label>Mail confirmation</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $mailconfirm == "1"}checked{/if} value="1" name="mailconfirm"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<dfn>Force new users to confirm the email address they entered before activating the new account.</dfn>
+
+		</div>
+
+		<div class="form-group">
+			<label>Administration confirmation</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $adminconfirm == "1"}checked{/if} value="1" name="adminconfirm"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<dfn>New users will be activated after administration confirmation from admin panel.</dfn>
+
+		</div>
+		<div class="form-group">
+			<label>Send wellcome mail</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $sendwellcommail == "1"}checked{/if} value="1" name="sendwellcommail"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<dfn>Send a wellcome mail to wellcome new users after registration process.</dfn>
+
+		</div>
+		<div class="form-group">
+			<label>New users group</label>
+
+			<select class="form-control" name="newusersgroup">
+				{foreach from=$datagroup item=i key=key}
+				<option value="{$i.id}" {if $newusersgroup eq $i.id}selected{/if}>{$i.groupname}</option>
+				{/foreach}
+			</select>
+			<dfn>User group assigned to new users.</dfn>
+
+		</div>
+
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Users images upload
+	</div>
+	<div class="col-md-6 settingdiv">
+
+		<div class="form-group">
+			<label>Upload user avator</label>
+				<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $uploaduseravator == "1"}checked{/if} value="{if $uploaduseravator == "1"}0{else}1{/if}" onchange="uploaduseravator.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="uploaduseravator" id="uploaduseravator" value="{$uploaduseravator}" type="hidden"/>
+			<dfn>Allow users to upload profile picture.</dfn>
+
+		</div>
+
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Allowed avator types</label>
+			<input class="form-control" placeholder="" value="{$avatortypes}" name="avatortypes">
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+
+	</div>
+	<div class="col-md-6 settingdiv">
+
+		<div class="form-group">
+			<label>Edit user avator</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $editavator == "1"}checked{/if} value="1" name="editavator"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<dfn>Allow users to upload profile picture.</dfn>
+
+		</div>
+
+		<div class="form-group">
+			<label>Allowed avator max size (MB)</label>
+			<output id="rangevalue" style="display: inline;float: right">
+				{$avatormaxsize} MB
+			</output>
+			<input value="{$avatormaxsize}" type = "range" min="0" max="100" onchange="rangevalue.value=value" name="avatormaxsize"/>
+
+			<dfn>Profile picture allowed size.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="alert bg-primary" role="alert">
+			<span class="glyphicon glyphicon-info-sign"></span> Avators images folder is: "../contents/avators"
+			
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Registration terms
+	</div>
+
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 29px">
+			<label>Activate registration terms </label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $tosactivate == "1"}checked{/if} value="{if $tosactivate == "1"}0{else}1{/if}" onchange="tosactivate.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="tosactivate" id="tosactivate" value="{$tosactivate}" type="hidden"/>
+			</label>
+			<dfn>The terms user will agree when registration to be able to use the website.</dfn>
+		</div>
+	</div>
+
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Registration terms page link</label>
+			<input class="form-control" name="termspagelink" value="{$termspagelink}">
+			<dfn>Meta keyword to be used by search engiens.</dfn>
+		</div>
+	</div>
+	<div class="col-md-12 settingdiv">
+		<div class="form-group">
+			<label>Or write registration terms here</label>
+			<textarea class="form-control" rows="12" name="termscontent">
+			{$termscontent}
+			</textarea>
+			<dfn>Meta keyword to be used by search engiens.</dfn>
+		</div>
+	</div>
+	
+	<div class="col-md-12 tcenter settingbutdiv">
+		<button type="submit" class="btn btn-primary" id="submit">
+			Update
+		</button>
+	</div>
+</form>

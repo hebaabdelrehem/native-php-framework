@@ -1,0 +1,155 @@
+<div class="headingcust">
+	<i class="glyphicon glyphicon-cog"></i> General settings
+</div>
+<form role="form" class="form-horizontal" id="updatesettings" name="updatesettings" action="settings.php?act=edit">
+	<input type="hidden" value="news" name="group" />
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable sticky news</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $stickyen == "1"}checked{/if} value="{if $stickyen == "1"}0{else}1{/if}" onchange="stickyen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="stickyen" id="stickyen" value="{$stickyen}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable normal news</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $normalen == "1"}checked{/if} value="{if $normalen == "1"}0{else}1{/if}" onchange="normalen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> 
+				<input name="normalen" id="normalen" value="{$normalen}" type="hidden"/>
+				</label>
+			<dfn>Refuse to repeat email address for more than one user during registration process.</dfn>
+			
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Maximum number of sticky news</label>
+			<output id="stickynumaa" style="display: inline;float: right">
+				{$stickynum}
+			</output>
+			<input value="{$stickynum}" type = "range" min="1" max="20" onchange="stickynumaa.value=value" name="stickynum"/>
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+	</div>
+	
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Maximum number of normal news</label>
+			<output id="normalnumaa" style="display: inline;float: right">
+				{$normalnum}
+			</output>
+			<input value="{$normalnum}" type = "range" min="1" max="20" onchange="normalnumaa.value=value" name="normalnum"/>
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> News extra
+	</div>
+
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable print button</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $newsprint == "1"}checked{/if} value="{if $newsprint == "1"}0{else}1{/if}" onchange="newsprint.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="newsprint" id="newsprint" value="{$newsprint}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable save as button</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $newssaveas == "1"}checked{/if} value="{if $newssaveas == "1"}0{else}1{/if}" onchange="newssaveas.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="newssaveas" id="newssaveas" value="{$newssaveas}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Attachments
+	</div>
+	<div class="col-md-6 settingdiv">
+
+		<div class="form-group" style="padding-bottom: 37px;">
+			<label>Allow pictures upload</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $newsattachmenten == "1"}checked{/if} value="{if $newsattachmenten == "1"}0{else}1{/if}" onchange="newsattachmenten.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> 
+				<input name="newsattachmenten" id="newsattachmenten" value="{$newsattachmenten}" type="hidden"/>
+				</label>
+			<dfn>Allow users to upload profile picture.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Maximum nubmer of pictures</label>
+			<output id="newsattachmentnumaa" style="display: inline;float: right">
+				{$newsattachmentnum} file
+			</output>
+			<input value="{$newsattachmentnum}" type = "range" min="1" max="10" onchange="newsattachmentnumaa.value=value" name="newsattachmentnum"/>
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Allowed pictures size</label>
+			<output id="newsattachmentsizeaa" style="display: inline;float: right">
+				{$newsattachmentsize} MB
+			</output>
+			<input value="{$newsattachmentsize}" type = "range" min="1" max="20" onchange="newsattachmentsizeaa.value=value" name="newsattachmentsize"/>
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Allowed pictures types</label>
+			<input class="form-control" placeholder="" value="{$newsattachmenttypes}" name="newsattachmenttypes">
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+
+	</div>
+	<div class="col-md-12">
+		<div class="alert bg-primary" role="alert">
+			<span class="glyphicon glyphicon-info-sign"></span> News attachment folder is: "../contents/news/"
+
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Use Editor
+	</div>
+
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Use editor with news</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $newseditor == "1"}checked{/if} value="{if $newseditor == "1"}0{else}1{/if}" onchange="newseditor.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="newseditor" id="newseditor" value="{$newseditor}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+
+	<div class="col-md-12 tcenter settingbutdiv">
+		<button type="submit" class="btn btn-primary" id="submit">
+			Update
+		</button>
+	</div>
+</form>

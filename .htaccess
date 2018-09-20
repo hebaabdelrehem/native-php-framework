@@ -1,0 +1,7 @@
+DirectoryIndex index.php
+RewriteEngine on
+
+RewriteRule ^editprofile/([A-Za-z0-9-]+)/?$ editprofile.php?edit=$1 [NC]
+RewriteRule ^editprofile/([A-Za-z0-9-]+)/?$ editprofile.php?edit=$1 [NC]
+RewriteRule ^oranges.html$ apples.html
+RewriteRule ^usercp?$ usercp.php [NC]

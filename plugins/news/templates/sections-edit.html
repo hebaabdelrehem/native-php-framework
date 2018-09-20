@@ -1,0 +1,245 @@
+{include file="file:[11]head.html"} 
+<script src="js/news.js"></script>
+
+<ol class="breadcrumb">
+	<li>
+		<a href="#"><span class="glyphicon glyphicon-home"></span></a>
+	</li>
+
+	<li class="">
+		News
+	</li>
+	<li class="active">
+		Sections
+	</li>
+</ol>
+
+<div class="row">
+	<div class="col-lg-12">
+		{include file='file:[11]messages.html'}
+
+	</div>
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 Edit section : {$sectionName}
+						 <div class="pluginhead">News Plugin</div>
+					</div>
+					
+					<div class="col-md-9">
+							<div class="panel-body tabssty">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active">
+									<a href="#en" aria-controls="english" role="tab" data-toggle="tab">English</a>
+								</li>
+								{foreach from=$languages item=language key=i}
+								{if $language.langcode != 'en'}
+								<li role="presentation">
+									<a href="#{$language.name}" aria-controls="{$language.name}" role="tab" data-toggle="tab">{$language.name} </a>
+								</li>
+								{/if}
+								{/foreach}
+							</ul>
+							<form role="form" id="editSection" name="editSection" action="" enctype="multipart/form-data">
+								<input type="hidden" value="{$secId}" name="secId" />
+								<div class="tab-content">
+									<div role="tabpanel" class="tab-pane active" id="en">
+										<div class="headingcust">
+											English Page details
+										</div>
+
+										<div class="form-group">
+											<label>Section name</label>
+											<input class="form-control" placeholder="" name="sectionName" value="{$sectionName}">
+											<dfn>The main title of the page that will viewed to users.</dfn>
+										</div>
+										<div class="form-group">
+											<label>Section description</label>
+											<textarea class="form-control" rows="3" name="sectionDescrip">{$sectionDescrip}</textarea>
+											<dfn>The page content that will viewed to user</dfn>
+										</div>
+									<div style="clear: both"></div>
+									<div class="headingcust">
+										Search engine
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Meta discription</label>
+											<input class="form-control" placeholder="" type="text" name="sectionMetadisc"  value="{$sectionMetadisc}">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Meta Keywords</label>
+											<input class="form-control" placeholder="" type="text" name="sectionMetakey"  value="{$sectionMetakey}">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<div class="form-group">
+												<label>Tags</label>
+												<input class="form-control" placeholder="" type="text" name="sectionTags"  value="{$sectionTags}">
+												<dfn>The main title of the page</dfn>
+											</div>
+										</div>
+									</div>
+									</div>
+
+									{foreach from=$languages item=language key=i}
+									{if $language.langcode != 'en'}
+									<div role="tabpanel" class="tab-pane" id="{$language.name}">
+										<div class="headingcust">
+											{$language.name} Page details
+											{if {$langnotes{$language.langcode}} != " "}<span class="label label-danger labelsett">{$langnotes{$language.langcode}}</span>{/if}
+										</div>
+
+										<input class="form-control" placeholder="" name="lang[]" value="{$language.langcode}" type="hidden">
+										<div class="form-group">
+											<label>Section name</label>
+											<input class="form-control" placeholder="" name="sectionName{$language.langcode}" value="{$sectionName{$language.langcode}}">
+											<dfn>The main title of the page</dfn>
+										</div>
+										<div class="form-group">
+											<label>Section description</label>
+											<textarea class="form-control" rows="3" name="sectionDescrip{$language.langcode}">{$sectionDescrip{$language.langcode}}</textarea>
+											<dfn>The page content that will viewed to user</dfn>
+										</div>
+										
+										<div style="clear: both"></div>
+									<div class="headingcust">
+										Search engine
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Meta discription</label>
+											<input class="form-control" placeholder="" type="text" name="sectionMetadisc{$language.langcode}" value="{$sectionMetadisc{$language.langcode}}">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Meta Keywords</label>
+											<input class="form-control" placeholder="" type="text" name="sectionMetakey{$language.langcode}" value="{$sectionMetakey{$language.langcode}}">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<div class="form-group">
+												<label>Tags</label>
+												<input class="form-control" placeholder="" type="text" name="sectionTags{$language.langcode}" value="{$sectionTags{$language.langcode}}">
+												<dfn>The main title of the page</dfn>
+											</div>
+										</div>
+									</div>
+									</div>
+									
+									{/if}
+									{/foreach}
+									
+									<div style="clear: both"></div>
+									<div class="headingcust">
+										News options
+									</div>
+									
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Status</label>
+											<select class="form-control" name="status">
+												<option value="1" {if $status eq '1'}selected{/if}>Enabled</option>
+												<option value="0" {if $status eq '0'}selected{/if}>Disabled</option>
+											</select>
+											<dfn>The main title of the page</dfn>
+										</div>
+
+									</div>
+									{if $newsattachmenten}
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Section picture</label>
+											<input class="form-control" placeholder="" type="file" name="sectionPicture">
+										</div>
+									</div>
+									
+									<div class="col-md-4">
+										<div class="alert bg-primary" role="alert" style="margin-top: 11px;">
+											<span class="glyphicon glyphicon-info-sign"></span> News folder is: "../contents/news"
+
+										</div>
+									</div>
+									{/if}
+
+									
+									
+									<div class="col-md-12 tcenter settingbutdiv">
+										<div style="padding:5px;display: inline-block;">
+											Other languages to add :
+											{foreach from=$languages item=language key=i}
+											
+											{$language.name}
+											<input type="checkbox" name="langup[]" value="{$language.langcode}">
+											
+											{/foreach}
+										</div>
+
+										<button type="submit" class="btn btn-primary" id="submit">
+											Edit section
+										</button>
+										<button type="reset" class="btn btn-default">
+											Reset
+										</button>
+									</div>
+							</form>
+						</div>
+					</div>
+						
+
+					</div>
+					<div class="col-md-3">
+						<div style="clear: both"></div>
+						<div class="headingcust"   style="margin-top: 15px">
+							Section picture
+						</div>
+						<div class="alert bg-info attachedfiles" role="alert" style="margin-top: 11px;">
+							{if $sectionPicture != ' '}
+
+						<img src="../../contents/news/{$sectionPicture}" style="width: 269px" />
+
+						{else}No Pictures{/if}
+						</div>
+						<div style="clear: both"></div>
+						<div class="headingcust">
+											 Sections You have
+										</div>
+							
+						
+						{foreach from=$Sections item=i key=key}
+
+						<i class="glyphicon glyphicon-hand-right"></i>
+						<a href="pagemanager.php?act=viewpage&id={$i.id}"> {$i.sectionName} </a>
+						<span class="pull-right"> {if $i.status eq 0}
+							Disabled
+							{else}
+							Active
+							{/if} </span>
+						<div class="divider2"></div>
+						{/foreach}
+						<div class="col-md-12 tcenter" style="margin-top:20px">
+
+							<button type="button" class="btn btn-info" onClick="location.href='news.admin.php?act=sections'" >
+								List sections
+							</button>
+							<br>
+							<br>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

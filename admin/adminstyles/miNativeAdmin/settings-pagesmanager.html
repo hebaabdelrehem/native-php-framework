@@ -1,0 +1,143 @@
+<div class="headingcust">
+	<i class="glyphicon glyphicon-cog"></i> General settings
+</div>
+<form role="form" class="form-horizontal" id="updatesettings" name="updatesettings" action="settings.php?act=edit">
+	<input type="hidden" value="pmanagersettings" name="group" />
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable pages system</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $pmangen == "1"}checked{/if} value="{if $pmangen == "1"}0{else}1{/if}" onchange="pmangen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="pmangen" id="pmangen" value="{$pmangen}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>List pages admin type</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $pmangmenuen == "1"}checked{/if} value="{if $pmangmenuen == "1"}0{else}1{/if}" onchange="pmangmenuen.value=value"/>
+				<span class="switch-label" data-on="Grid" data-off="Table"></span> <span class="switch-handle"></span> 
+				<input name="pmangmenuen" id="pmangmenuen" value="{$pmangmenuen}" type="hidden"/>
+				</label>
+			<dfn>Refuse to repeat email address for more than one user during registration process.</dfn>
+			
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Pages extra
+	</div>
+
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable print button</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $pmangprint == "1"}checked{/if} value="{if $pmangprint == "1"}0{else}1{/if}" onchange="pmangprint.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="pmangprint" id="pmangprint" value="{$pmangprint}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable save as button</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $pmangsaveas == "1"}checked{/if} value="{if $pmangsaveas == "1"}0{else}1{/if}" onchange="pmangsaveas.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="pmangsaveas" id="pmangsaveas" value="{$pmangsaveas}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Enable save as pdf button</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $pmangsaveaspdf == "1"}checked{/if} value="{if $pmangsaveaspdf == "1"}0{else}1{/if}" onchange="pmangsaveaspdf.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="pmangsaveaspdf" id="pmangsaveaspdf" value="{$pmangsaveaspdf}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Attachments
+	</div>
+	<div class="col-md-6 settingdiv">
+
+		<div class="form-group" style="padding-bottom: 37px;">
+			<label>Allow attachment with pages</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $pmangattachment == "1"}checked{/if} value="{if $pmangattachment == "1"}0{else}1{/if}" onchange="pmangattachment.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> 
+				<input name="pmangattachment" id="pmangattachment" value="{$pmangattachment}" type="hidden"/>
+				</label>
+			<dfn>Allow users to upload profile picture.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Maximum nubmer of attached files</label>
+			<output id="pmangattachmentnumberaa" style="display: inline;float: right">
+				{$pmangattachmentnumber} file
+			</output>
+			<input value="{$pmangattachmentnumber}" type = "range" min="1" max="10" onchange="pmangattachmentnumberaa.value=value" name="pmangattachmentnumber"/>
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Allowed attachment size</label>
+			<output id="pmangattachmentsizeaa" style="display: inline;float: right">
+				{$pmangattachmentsize} MB
+			</output>
+			<input value="{$pmangattachmentsize}" type = "range" min="1" max="20" onchange="pmangattachmentsizeaa.value=value" name="pmangattachmentsize"/>
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 14px">
+			<label>Allowed attachmet types</label>
+			<input class="form-control" placeholder="" value="{$pmangattachmenttypes}" name="pmangattachmenttypes">
+			<dfn>Profile picture allowed types.</dfn>
+
+		</div>
+
+	</div>
+	<div class="col-md-12">
+		<div class="alert bg-primary" role="alert">
+			<span class="glyphicon glyphicon-info-sign"></span> Pages attachment folder is: "../contents/pagesmanger"
+
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Use Editor
+	</div>
+
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Use editor with pages</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $pmangeditor == "1"}checked{/if} value="{if $pmangeditor == "1"}0{else}1{/if}" onchange="pmangeditor.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span>
+				<input name="pmangeditor" id="pmangeditor" value="{$pmangeditor}" type="hidden"/>
+			</label>
+			<dfn>Enable new users to access to register page and sign up an account in you site.</dfn>
+		</div>
+	</div>
+
+	<div class="col-md-12 tcenter settingbutdiv">
+		<button type="submit" class="btn btn-primary" id="submit">
+			Update
+		</button>
+	</div>
+</form>

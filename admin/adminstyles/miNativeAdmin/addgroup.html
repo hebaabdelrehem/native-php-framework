@@ -1,0 +1,107 @@
+ {include file="head.html"}
+			<ol class="breadcrumb">
+				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li class="">User groups</li>
+                <li class="active">Add group</li>
+			</ol>
+		</div><!--/.row-->
+		<div class="row">
+			<div class="col-lg-12">
+                {include file='messages.html'}
+				
+			</div>
+             <div class="col-lg-12">
+<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Add group
+                     <button type="button" class="btn btn-primary pull-right menus-but" onClick="location.href='usergroups.php?act=list'">
+                    	<i class="glyphicon glyphicon-cog "></i> Manage groups</button>
+					</div>
+						
+					
+					<div class="col-lg-6" id="groupdata">
+						<h4><i class="glyphicon glyphicon-list profilei"></i> Group details </h4>
+						
+							<form role="form" id="addgroup" name="addgroup" action="">
+
+								<div class="form-group">
+									<label>Group name</label>
+									<input class="form-control" placeholder="" name="groupname">
+								</div>
+								<div class="form-group">
+									<label>Group Shortname</label>
+									<input class="form-control" placeholder="" name="shortname">
+								</div>
+								<div class="form-group">
+									<label>Group color</label>
+									<input class="form-control" placeholder="" name="color">
+								</div>
+								 <div class="form-group">
+									<label>User title</label>
+									<input class="form-control" placeholder="" name="usertitle">
+								</div>
+                                <div class="col-md-12 tcenter">
+								<button type="submit" class="btn btn-primary" id="submit">Add Group</button>
+								<button type="reset" class="btn btn-default">Reset</button>
+                                    </div>
+                                </form>
+					</div>
+					
+					<div class="col-lg-6" id="permdata">
+					<div class="panel-body">
+						
+						<div class="panel panel-blue" style="position: relative !important">
+							
+					<div class="panel-heading dark-overlay bluehead"><i class="glyphicon glyphicon-cog"></i> Group Permissions </div>
+					<div class="diablelayer" id="layer"></div>
+					<div class="panel-body">
+						
+						<ul class="todo-list">
+							
+							{foreach from=$permission item=i key=key}
+						<li class="todo-list-item permlist">
+								<div class="checkbox">
+									<label for="checkbox" class="permpadding">{$i.name}</label> ({$i.perm_group}) | ({$i.shortname}) 
+								</div>
+								<div id="{$i.shortname}" class="pull-right">
+								<form class="formt" role="form" id="{$i.shortname}" data-shortname="{$i.shortname}" action="usergroups.php?act=changeperm" method="post">
+								<div class="pull-right formmarg">
+									<div class="form-group">
+								
+								<label class="switch switch-left-right">
+						<input class="switch-input changeperm" type="checkbox" value="1" onchange="newgroupvaluea.value=value"/>
+						<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+						<input name="value" id="newgroupvaluea" value=" " type="hidden"  data-shortname="{$i.shortname}" />
+						<input type="hidden" name="perm" value="{$i.shortname}" />
+															
+								
+									</div>
+								</div>
+
+								
+								</form>
+								</div>
+								
+						</li>
+							{/foreach}
+							
+						</ul>
+					</div>
+					<div class="panel-footer">
+
+						
+					</div>
+				</div>
+				
+					
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+           </div><!-- /.col--> 
+
+		</div>
+

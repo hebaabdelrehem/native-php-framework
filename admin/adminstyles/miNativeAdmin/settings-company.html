@@ -1,0 +1,241 @@
+<div class="headingcust">
+	<i class="glyphicon glyphicon-cog"></i> Company/Website data
+</div>
+
+<form role="form" class="form-horizontal" id="updatesettings" name="updatesettings" action="settings.php?act=edit">
+	<input type="hidden" value="compprofsettings" name="group" />
+
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Company/Website full name</label>
+
+			<input class="form-control" placeholder="" value="{$compfullname}" name="compfullname">
+			<dfn>Your company/website full name, ex: MiNative for information systems co.</dfn>
+
+		</div>
+		<div class="form-group">
+			<label>Manager name</label>
+
+			<input class="form-control" placeholder="" value="{$compmanname}" name="compmanname">
+			<dfn>Your company/website manager name.</dfn>
+
+		</div>
+		<div class="form-group">
+			<label>Manager title</label>
+
+			<input class="form-control" placeholder="" value="{$compmantit}" name="compmantit">
+			<dfn>Your company/website manager title, ex: Founder, GM, CEO.</dfn>
+
+		</div>
+		<div class="form-group">
+			<label>Commercial license number</label>
+
+			<input class="form-control" placeholder="" value="{$compcomlice}" name="compcomlice">
+			<dfn>Your company/website Commercial license number, ex: 86385.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 25px">
+			<label>Company/Website activities</label>
+			<textarea class="form-control" rows="18" name="compactivities">{$compactivities}</textarea>									
+
+ 			<dfn>Your company/website activities that it setuped for.</dfn>
+
+		</div>
+	</div>
+	
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Contact informations
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Main branch address</label>
+
+			<input class="form-control" placeholder="" value="{$mainbrabadd}" name="mainbrabadd">
+			<dfn>Your company main branch address.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Main landline phone</label>
+
+			<input class="form-control" placeholder="" value={$mainlandlinephone} name="mainlandlinephone">
+			<dfn>Your company main landline phone.</dfn>
+
+		</div>
+
+	</div>
+	
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Main mobile phone</label>
+
+			<input class="form-control" placeholder="" value="{$mainmobilephone}" name="mainmobilephone">
+			<dfn>Your company main mobile phone.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Main fax number</label>
+
+			<input class="form-control" placeholder="" value="{$mainfax}" name="mainfax">
+			<dfn>Your company fax number.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Skype account/number</label>
+
+			<input class="form-control" placeholder="" value="{$compskype}" name="compskype">
+			<dfn>Your company account or number on skype.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Main email address</label>
+
+			<input class="form-control" placeholder="" value="{$mainemail}" name="mainemail">
+			<dfn>Your company main email address.</dfn>
+
+		</div>
+	</div>
+	
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Social networks data
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Facebook</label>
+
+			<input class="form-control" placeholder="" value="{$compfacebooklink}" name="compfacebooklink">
+			
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 19px;">
+			<label>Enable facebook link</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $compfacebooklinken == "1"}checked{/if} value="{if $compfacebooklinken == "1"}0{else}1{/if}" onchange="compfacebooklinken.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="compfacebooklinken" id="compfacebooklinken" value="{$compfacebooklinken}" type="hidden"/>
+			<dfn>Enable facebook link to appear to users.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Twitter</label>
+
+			<input class="form-control" placeholder="" value="{$comptwitterlink}" name="comptwitterlink">
+			
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group"  style="padding-bottom: 19px;">
+			<label>Enable twitter link</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $comptwitterlinken == "1"}checked{/if} value="{if $comptwitterlinken == "1"}0{else}1{/if}" onchange="comptwitterlinken.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="comptwitterlinken" id="comptwitterlinken" value="{$comptwitterlinken}" type="hidden"/>
+			<dfn>Enable twitter link to appear to users.</dfn>
+
+		</div>
+	</div>
+	
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Youtube</label>
+
+			<input class="form-control" placeholder="" value="{$compyoutubelink}" name="compyoutubelink">
+			
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group"  style="padding-bottom: 19px;">
+			<label>Enable youtube link</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $compyoutubelinken == "1"}checked{/if} value="{if $compyoutubelinken == "1"}0{else}1{/if}" onchange="compyoutubelinken.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="compyoutubelinken" id="compyoutubelinken" value="{$compyoutubelinken}" type="hidden"/>
+			<dfn>Enable youtube link to appear to users.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Google+</label>
+
+			<input class="form-control" placeholder="" value="{$compgoogleplink}" name="compgoogleplink">
+			
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group"  style="padding-bottom: 19px;">
+			<label>Enable google+ link</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $compgoogleplinken == "1"}checked{/if} value="{if $compgoogleplinken == "1"}0{else}1{/if}" onchange="compgoogleplinken.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="compgoogleplinken" id="compgoogleplinken" value="{$compgoogleplinken}" type="hidden"/>
+			<dfn>Enable google+ link to appear to users.</dfn>
+
+		</div>
+	</div>
+	
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Linkedin</label>
+
+			<input class="form-control" placeholder="" value="{$complinkedinlink}" name="complinkedinlink">
+			
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group"  style="padding-bottom: 19px;">
+			<label>Enable Linkedin link</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $complinkedinlinken == "1"}checked{/if} value="{if $complinkedinlinken == "1"}0{else}1{/if}" onchange="complinkedinlinken.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="complinkedinlinken" id="complinkedinlinken" value="{$complinkedinlinken}" type="hidden"/>
+			<dfn>Enable Linkedin link to appear to users.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Pinterest</label>
+
+			<input class="form-control" placeholder="" value="{$comppinterestlink}" name="comppinterestlink">
+			
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group"  style="padding-bottom: 19px;">
+			<label>Enable Pinterest link</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $comppinterestlinken == "1"}checked{/if} value="{if $comppinterestlinken == "1"}0{else}1{/if}" onchange="comppinterestlinken.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="comppinterestlinken" id="comppinterestlinken" value="{$comppinterestlinken}" type="hidden"/>
+			<dfn>Enable Pinterest link to appear to users.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-12 tcenter settingbutdiv">
+		<button type="submit" class="btn btn-primary" id="submit">
+			Update
+		</button>
+	</div>
+
+</form>

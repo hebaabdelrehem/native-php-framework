@@ -1,0 +1,176 @@
+<div class="headingcust">
+	<i class="glyphicon glyphicon-cog"></i> General mail settings
+</div>
+
+<form role="form" class="form-horizontal" id="updatesettings" name="updatesettings" action="settings.php?act=edit">
+	<input type="hidden" value="mailsettings" name="group" />
+
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 29px;">
+			<label>Enable mail sending</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $mailen == "1"}checked{/if} value="{if $mailen == "1"}0{else}1{/if}" onchange="mailen.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="mailen" id="mailen" value="{$mailen}" type="hidden"/>
+			<dfn>Enable sending emails from your website to mail servers.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Mail sending method</label>
+
+			<select class="form-control" name="mailmethod">
+				<option value="phpmail" {if $mailmethod eq "phpmail"}selected{/if}>phpmail</option>
+				<option value="smtp" {if $mailmethod eq "smtp"}selected{/if}>smtp</option>
+			</select>
+			<dfn>The method the system will use to send emails from your website.</dfn>
+
+		</div>
+	</div>
+	
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Smtp settings
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Smtp server</label>
+			<input class="form-control" placeholder="" value="{$smtpserver}" name="smtpserver">
+			<dfn>The server name of your smtp service provider.</dfn>
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Smtp username</label>
+
+			<input class="form-control" placeholder="" value="{$smtpuser}" name="smtpuser">
+			<dfn>The username system will use to log into the smtp server.</dfn>
+
+		</div>
+
+	</div>
+	
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Smtp password</label>
+
+			<input class="form-control" placeholder="" value="{$smtppass}" name="smtppass">
+			<dfn>The password system will use to log into the smtp server.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Smtp port</label>
+
+			<input class="form-control" placeholder="" value="{$smtport}" name="smtport">
+			<dfn>The port system will use to connect to the smtp server.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group" style="padding-bottom: 29px;">
+			<label>Smtp authentication required</label>
+			<label class="switch switch-left-right pull-right">
+				<input class="switch-input" type="checkbox" {if $smtpauthreq == "1"}checked{/if} value="{if $smtpauthreq == "1"}0{else}1{/if}" onchange="smtpauthreq.value=value"/>
+				<span class="switch-label" data-on="Yes" data-off="No"></span> <span class="switch-handle"></span> </label>
+			<input name="smtpauthreq" id="smtpauthreq" value="{$smtpauthreq}" type="hidden"/>
+			<dfn>If the smtp server required to authenticate when connecting to it.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Smtp authentication type</label>
+
+			<select class="form-control" name="smtpauthrtype">
+				<option value="nosec" {if $smtpauthrtype eq "nosec"}selected{/if}>No security</option>
+				<option value="SSL" {if $smtpauthrtype eq "SSL"}selected{/if}>SSL</option>
+				<option value="TLS" {if $smtpauthrtype eq "TLS"}selected{/if}>TLS</option>
+				<option value="ALS" {if $smtpauthrtype eq "ALS"}selected{/if}>ALS</option>
+			</select>
+			<dfn>Type of autentication the system will use to connect to smtp server.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="alert bg-primary" role="alert">
+			<span class="glyphicon glyphicon-info-sign"></span> Smtp settings:
+			<br> 
+			You can get the values of this settings from the smtp service provider. 
+			
+		</div>
+	</div>
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Mail header information
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Sender email</label>
+
+			<input class="form-control" placeholder="" value="{$sendermail}" name="sendermail" type="email">
+			<dfn>The email that will appear to email reciver when viewing the email.</dfn>
+
+		</div>
+	</div>
+	<div class="col-md-6 settingdiv">
+		<div class="form-group">
+			<label>Mail default subject</label>
+
+			<input class="form-control" placeholder="" value="{$maildefsubj}" name="maildefsubj" type="text">
+			<dfn>The subject system will use when sending emails.</dfn>
+
+		</div>
+	</div>
+	
+	<div style="clear:both "></div>
+	<div class="headingcust">
+		<i class="glyphicon glyphicon-cog"></i> Default Mail template
+	</div>
+	
+	<div class="col-md-7 settingdiv">
+		<div class="form-group">
+			<label>Default Mail header</label>
+
+			<textarea class="form-control" rows="5" name="defaultmailheader">{$defaultmailheader}</textarea>		
+			<dfn>The content of the default email header.</dfn>
+
+		</div>
+
+		<div class="form-group">
+			<label>Default Mail footer</label>
+
+			<textarea class="form-control" rows="5" name="defaultmailfooter">{$defaultmailfooter}</textarea>		
+			<dfn>The content of the default email footer.</dfn>
+
+		</div>
+
+		<div class="form-group">
+			<label>Default Mail body</label>
+			<textarea class="form-control" rows="10" name="defaultmailbody">{$defaultmailbody}</textarea>									
+
+ 			<dfn>The content of the default email body.</dfn>
+
+		</div>
+
+	</div>
+	<div class="col-md-5 settingdiv">
+		<div class="form-group">
+			<label>Default Mail Css</label>
+
+			<textarea class="form-control" rows="29" name="defaultmailcss">{$defaultmailcss}</textarea>		
+			<dfn>The style of the default email.</dfn>
+
+		</div>
+
+	</div>
+
+	<div class="col-md-12 tcenter settingbutdiv">
+		<button type="submit" class="btn btn-primary" id="submit">
+			Update
+		</button>
+	</div>
+
+</form>

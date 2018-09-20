@@ -1,0 +1,258 @@
+{include file="file:[11]head.html"} <script src="js/news.js"></script>
+<ol class="breadcrumb">
+	<li>
+		<a href="#"><span class="glyphicon glyphicon-home"></span></a>
+	</li>
+
+	<li class="">
+		News plugin
+	</li>
+	<li class="active">
+		Add news
+	</li>
+</ol>
+
+<div class="row">
+	<div class="col-lg-12">
+		{include file='file:[11]messages.html'}
+
+	</div>
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Adding news
+						<div class="pluginhead">
+							News Plugin
+						</div>
+					</div>
+
+					<div class="col-md-9">
+						<div class="panel-body tabssty">
+
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active">
+									<a href="#en" aria-controls="english" role="tab" data-toggle="tab">English</a>
+								</li>
+								{foreach from=$languages item=language key=i}
+								{if $language.langcode != 'en'}
+								<li role="presentation">
+									<a href="#{$language.name}" aria-controls="{$language.name}" role="tab" data-toggle="tab">{$language.name} </a>
+								</li>
+								{/if}
+								{/foreach}
+							</ul>
+							<form role="form" id="addContent" name="addContent" action="" enctype="multipart/form-data">
+								<div class="tab-content">
+									<div role="tabpanel" class="tab-pane active" id="en">
+										<div class="headingcust">
+											English news details
+										</div>
+
+										<div class="form-group">
+											<label>News title</label>
+											<input class="form-control" placeholder="" name="newsTitle">
+											<dfn>The main title of the page that will viewed to users.</dfn>
+										</div>
+										<div class="form-group">
+											<label>News brief</label>
+											<textarea class="form-control" rows="3" name="newsBrief"></textarea>
+											<dfn>The page content that will viewed to user</dfn>
+										</div>
+										<div class="form-group">
+											<label>News content</label>
+											<textarea class="form-control" rows="15" name="newsContent" {if $newseditor}id="textareatiny0"{/if}></textarea>
+											<dfn>The page content that will viewed to user</dfn>
+										</div>
+										<div style="clear: both"></div>
+										<div class="headingcust">
+											Search engine
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label>Meta discription</label>
+												<input class="form-control" placeholder="" type="text" name="newsMetadisc">
+												<dfn>The main title of the page</dfn>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label>Meta Keywords</label>
+												<input class="form-control" placeholder="" type="text" name="newsMetakey">
+												<dfn>The main title of the page</dfn>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<div class="form-group">
+													<label>Tags</label>
+													<input class="form-control" placeholder="" type="text" name="newsTags">
+													<dfn>The main title of the page</dfn>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									{foreach from=$languages item=language key=i}
+									{if $language.langcode != 'en'}
+									<div role="tabpanel" class="tab-pane" id="{$language.name}">
+										<div class="headingcust">
+											{$language.name} Page details
+										</div>
+
+										<input class="form-control" placeholder="" name="lang[]" value="{$language.langcode}" type="hidden">
+										<div class="form-group">
+											<label>News title</label>
+											<input class="form-control" placeholder="" name="newsTitle{$language.langcode}">
+											<dfn>The main title of the page</dfn>
+										</div>
+										<div class="form-group">
+											<label>News brief</label>
+											<textarea class="form-control" rows="3" name="newsBrief{$language.langcode}"></textarea>
+											<dfn>The page content that will viewed to user</dfn>
+										</div>
+										<div class="form-group">
+											<label>News content</label>
+											<textarea class="form-control" rows="15" name="newsContent{$language.langcode}" {if $newseditor}id="textareatiny{$i}"{/if}></textarea>
+											<dfn>The main title of the page</dfn>
+										</div>
+										<div style="clear: both"></div>
+										<div class="headingcust">
+											Search engine
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label>Meta discription</label>
+												<input class="form-control" placeholder="" type="text" name="newsMetadisc{$language.langcode}">
+												<dfn>The main title of the page</dfn>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label>Meta Keywords</label>
+												<input class="form-control" placeholder="" type="text" name="newsMetakey{$language.langcode}">
+												<dfn>The main title of the page</dfn>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<div class="form-group">
+													<label>Tags</label>
+													<input class="form-control" placeholder="" type="text" name="newsTags{$language.langcode}">
+													<dfn>The main title of the page</dfn>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									{/if}
+									{/foreach}
+
+									<div style="clear: both"></div>
+									<div class="headingcust">
+										News options
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Writer name</label>
+											<input class="form-control" placeholder="" type="text" name="newsWriter">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Publish date</label>
+											<input class="form-control" placeholder="" type="date" name="newsPubDate">
+											<dfn>The main title of the page</dfn>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Status</label>
+											<select class="form-control" name="newsStatus">
+												<option value="1">Enabled</option>
+												<option value="0">Disabled</option>
+											</select>
+											<dfn>The main title of the page</dfn>
+										</div>
+
+									</div>
+
+									<div class="col-md-12 tcenter settingbutdiv">
+										<div style="padding:5px;display: inline-block;">
+											Other languages to add :
+											{foreach from=$languages item=language key=i}
+											{if $language.langcode != 'en'}
+											{$language.name}
+											<input type="checkbox" name="langup[]" value="{$language.langcode}">
+											{/if}
+											{/foreach}
+										</div>
+
+										<button type="submit" class="btn btn-primary" id="submit">
+											Add page
+										</button>
+										<button type="reset" class="btn btn-default">
+											Reset
+										</button>
+									</div>
+
+								</div>
+						</div>
+
+					</div>
+
+					<div class="col-md-3">
+
+						<div class="headingcust" style="margin-top: 15px">
+							News settings
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>Parent section</label>
+								<select class="form-control" name="newsParentId">
+									{foreach from=$Sections item=i}
+									<option value="{$i.id}">{$i.sectionName}</option>
+									{/foreach}
+								</select>
+								<dfn>The main title of the page</dfn>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>News type</label>
+								<select class="form-control" name="newsType">
+									<option value="st">Sticky</option>
+									<option value="imp">Important</option>
+									<option value="nor">Normal</option>
+								</select>
+								<dfn>The main title of the page</dfn>
+							</div>
+						</div>
+						<div style="clear: both"></div>
+						<div class="headingcust"  >
+							News picture
+						</div>
+						{if $newsattachmenten}
+						<div class="col-md-12">
+							
+							<div class="form-group">
+
+								<input class="form-control" placeholder="" type="file" name="newsFiles[]" style="margin-bottom: 5px" multiple>
+								<dfn>* Allowed types: ({$newsattachmenttype})</dfn>
+								<dfn>* Allowed size: ({$newsattachmentsize} MB)</dfn>
+						<dfn>* Maximum files: ({$newsattachmentnum} files)</dfn>
+						</div>
+							
+						</div>
+						</form>
+						{/if}
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

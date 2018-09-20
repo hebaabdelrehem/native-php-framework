@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d7414634-9d3b-49c2-b29e-ff99ad4ca3f1" name="Default" comment="" />
+    <ignored path="MiNative-CMS.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="MiNative-CMS" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="mail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traxeednew.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/traxeednew.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.0">
+              <caret line="331" column="134" selection-start-line="331" selection-start-column="134" selection-end-line="331" selection-end-column="134" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/includes/admin.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.230769">
+              <caret line="13" column="69" selection-start-line="13" selection-start-column="69" selection-end-line="13" selection-end-column="69" />
+              <folding>
+                <marker date="1485781954156" expanded="true" signature="1273:1318" placeholder="UPDATE setti... " />
+                <marker date="1485781954156" expanded="true" signature="1642:1699" placeholder="SELECT id,gr... usergroups" />
+                <marker date="1485781954156" expanded="true" signature="2913:2957" placeholder="SELECT id FR... users" />
+                <marker date="1485781954156" expanded="true" signature="3144:3187" placeholder="SELECT id FR... users" />
+                <marker date="1485781954156" expanded="true" signature="3584:3842" placeholder="INSERT INTO users... " />
+                <marker date="1485781954156" expanded="true" signature="5380:5659" placeholder="UPDATE users... " />
+                <marker date="1485781954156" expanded="true" signature="5984:6235" placeholder="UPDATE users... " />
+                <marker date="1485781954156" expanded="true" signature="6766:6866" placeholder="INSERT INTO languages... " />
+                <marker date="1485781954156" expanded="true" signature="7317:7403" placeholder="UPDATE langu... " />
+                <marker date="1485781954156" expanded="true" signature="7800:7854" placeholder="UPDATE langu... " />
+                <marker date="1485781954156" expanded="true" signature="8230:8270" placeholder="DELETE FROM " />
+                <marker date="1485781954156" expanded="true" signature="8372:8409" placeholder="DELETE FROM " />
+                <marker date="1485781954156" expanded="true" signature="8795:8880" placeholder="INSERT INTO multi_lang... " />
+                <marker date="1485781954156" expanded="true" signature="9343:9445" placeholder="UPDATE multi... " />
+                <marker date="1485781954156" expanded="true" signature="9596:9695" placeholder="UPDATE multi... " />
+                <marker date="1485781954156" expanded="true" signature="10102:10157" placeholder="DELETE FROM " />
+                <marker date="1485781954156" expanded="true" signature="10521:10565" placeholder="UPDATE users... " />
+                <marker date="1485781954156" expanded="true" signature="11121:11340" placeholder="INSERT INTO pagemanager... " />
+                <marker date="1485781954156" expanded="true" signature="12049:12307" placeholder="UPDATE pagem... " />
+                <marker date="1485781954156" expanded="true" signature="13218:13271" placeholder="SELECT * FRO... ${$table}" />
+                <marker date="1485781954156" expanded="true" signature="13541:13580" placeholder="UPDATE ${$ta... " />
+                <marker date="1485781954156" expanded="true" signature="13939:13984" placeholder="UPDATE ${$ta... " />
+                <marker date="1485781954156" expanded="true" signature="14329:14371" placeholder="UPDATE users... " />
+                <marker date="1485781954156" expanded="true" signature="14817:14855" placeholder="SELECT * FRO... ${$table}" />
+                <marker date="1485781954156" expanded="true" signature="15180:15211" placeholder="DELETE FROM " />
+                <marker date="1485781954156" expanded="true" signature="15510:15546" placeholder="SELECT filen... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="english.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/languages/english.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plugins/news/init.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.admin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/news/news.admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/news/news.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="11.807693">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ccenter.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/ccenter.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="79.15385">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1485781715927" expanded="true" signature="1359:1480" placeholder="INSERT INTO form_contact... " />
+                <marker date="1485781715927" expanded="true" signature="2416:2507" placeholder="INSERT INTO form_replies... " />
+                <marker date="1485781715927" expanded="true" signature="2890:2931" placeholder="SELECT * FRO... form_contact" />
+                <marker date="1485781715927" expanded="true" signature="3532:3624" placeholder="SELECT id,re... " />
+                <marker date="1485781715927" expanded="true" signature="3888:3947" placeholder="SELECT * FRO... form_contact" />
+                <marker date="1485781715927" expanded="true" signature="4270:4315" placeholder="UPDATE form_... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.plugin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/news/news.plugin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.9230769">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/traxeed/includes/config.php" />
+        <option value="$PROJECT_DIR$/traxeed/includes/database.class.php" />
+        <option value="$PROJECT_DIR$/traxeed/includes/functions.php" />
+        <option value="$PROJECT_DIR$/traxeed/includes/hooks/hooks.init.php" />
+        <option value="$PROJECT_DIR$/traxeed/includes/languages.class.php" />
+        <option value="$PROJECT_DIR$/traxeed/includes/mail.class.php" />
+        <option value="$PROJECT_DIR$/traxeed/includes/pages.class.php" />
+        <option value="$PROJECT_DIR$/traxeed/includes/smarty.class.php" />
+        <option value="$PROJECT_DIR$/traxeed/includes/traxeed.class.php" />
+        <option value="$PROJECT_DIR$/traxeed/includes/upload.class.php" />
+        <option value="$PROJECT_DIR$/traxeed/includes/users.class.php" />
+        <option value="$PROJECT_DIR$/traxeed/index.php" />
+        <option value="$PROJECT_DIR$/traxeed/layout.php" />
+        <option value="$PROJECT_DIR$/traxeed/login.php" />
+        <option value="$PROJECT_DIR$/traxeed/mail.php" />
+        <option value="$PROJECT_DIR$/traxeed/page.php" />
+        <option value="$PROJECT_DIR$/traxeed/plugins/news/includes/news.class.php" />
+        <option value="$PROJECT_DIR$/traxeed/plugins/news/init.php" />
+        <option value="$PROJECT_DIR$/traxeed/plugins/news/news.admin.php" />
+        <option value="$PROJECT_DIR$/traxeed/plugins/news/news.plugin.php" />
+        <option value="$PROJECT_DIR$/traxeed/plugins/news/templates_c/3d06cb1fbe7f1233d9a13dfe91c01d1005765466.file.content-list.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/plugins/news/templates_c/7bbce0dd7046eb6eec1515ce27407cb844c83532.file.messages.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/plugins/news/templates_c/9a0d0dcd905bf01f497c7442776e78b043982fe3.file.content-add.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/plugins/news/templates_c/9d364067065d8108aef54468659adee201f7f870.file.sections-add.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/plugins/news/templates_c/9fbd4a7d9939c8928e7b57063e56c415c3c0a216.file.head.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/plugins/news/templates_c/dc4634da3213fae5906fde3bcf2fe516e4b8361e.file.sections.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/plugins/news/templates_c/dd7c2ad69441aa6001d70da87bbe8011a8dd7d3c.file.sections-edit.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/register.php" />
+        <option value="$PROJECT_DIR$/traxeed/starter.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/0074a0ac8ccd30c736937a4fe93e1b8b361ac3f1.file.header.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/0154fda98706f2b57c9599e0b48946ed10276097.file.sidemenu.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/0c0631db1619445531c9c2af3052719e9a987c42.file.editprofile.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/2f096fd659c4d4c96dc30fe597aec53b3309c15f.file.ccenterview.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/2f45bb5a724a86ce89128bcd7ef4ec8baff5b08b.file.usercp.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/5b841c4935c7434308c498c2d57df7d365a9a3ff.file.important.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/62778e021c52a689b0255f0573e2d4f464420930.file.adminbar.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/6668affda2cbd5de1729b861375033347611c12e.file.head.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/66c7825421f5c62eee0634836ea92d4a95f129db.file.footer.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/68c7fdcd1b0a70f44cc90cd5fbe2e377f64ceb81.file.register.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/6e6fe1081d771062d1fc19107cdbce8bcf7093b7.file.messages.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/7e520cf680b9257edd8b7e277d2bda1cef6cf0ef.file.compprof.html.php" />
+        <option value="$PROJECT_DIR$/traxeed/templates_c/89128b7ffd1ed6a281a7f515f90f3a48c791114a.file.index.html.php" />
+        <option value="$PROJECT_DIR$/traxeed.sql" />
+        <option value="$PROJECT_DIR$/traxeed/tests/traxeednew.sql" />
+        <option value="$PROJECT_DIR$/traxeed/traxeed.sql" />
+        <option value="$PROJECT_DIR$/admin/adminstarter.php" />
+        <option value="$PROJECT_DIR$/mail.php" />
+        <option value="$PROJECT_DIR$/tests/traxeednew.sql" />
+        <option value="$PROJECT_DIR$/admin/includes/admin.class.php" />
+        <option value="$PROJECT_DIR$/admin/languages/english.php" />
+        <option value="$PROJECT_DIR$/plugins/news/news.plugin.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MiNative-CMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MiNative-CMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MiNative-CMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MiNative-CMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MiNative-CMS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="news" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d7414634-9d3b-49c2-b29e-ff99ad4ca3f1" name="Default" comment="" />
+      <created>1485780752476</created>
+      <option name="number" value="Default" />
+      <updated>1485780752476</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="-1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/traxeed/includes/smarty.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/includes/traxeed.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/includes/upload.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/includes/users.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/plugins/news/includes/news.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/plugins/news/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/plugins/news/news.admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/plugins/news/news.plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/plugins/news/templates_c/3d06cb1fbe7f1233d9a13dfe91c01d1005765466.file.content-list.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/plugins/news/templates_c/7bbce0dd7046eb6eec1515ce27407cb844c83532.file.messages.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/plugins/news/templates_c/9a0d0dcd905bf01f497c7442776e78b043982fe3.file.content-add.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/plugins/news/templates_c/9d364067065d8108aef54468659adee201f7f870.file.sections-add.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/plugins/news/templates_c/9fbd4a7d9939c8928e7b57063e56c415c3c0a216.file.head.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/plugins/news/templates_c/dc4634da3213fae5906fde3bcf2fe516e4b8361e.file.sections.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/plugins/news/templates_c/dd7c2ad69441aa6001d70da87bbe8011a8dd7d3c.file.sections-edit.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/starter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/0074a0ac8ccd30c736937a4fe93e1b8b361ac3f1.file.header.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/0154fda98706f2b57c9599e0b48946ed10276097.file.sidemenu.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/0c0631db1619445531c9c2af3052719e9a987c42.file.editprofile.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/2f096fd659c4d4c96dc30fe597aec53b3309c15f.file.ccenterview.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/2f45bb5a724a86ce89128bcd7ef4ec8baff5b08b.file.usercp.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/5b841c4935c7434308c498c2d57df7d365a9a3ff.file.important.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.230769">
+          <caret line="27" column="209" selection-start-line="27" selection-start-column="209" selection-end-line="27" selection-end-column="209" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/62778e021c52a689b0255f0573e2d4f464420930.file.adminbar.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/6668affda2cbd5de1729b861375033347611c12e.file.head.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/66c7825421f5c62eee0634836ea92d4a95f129db.file.footer.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/68c7fdcd1b0a70f44cc90cd5fbe2e377f64ceb81.file.register.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/6e6fe1081d771062d1fc19107cdbce8bcf7093b7.file.messages.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/7e520cf680b9257edd8b7e277d2bda1cef6cf0ef.file.compprof.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/templates_c/89128b7ffd1ed6a281a7f515f90f3a48c791114a.file.index.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="16.384615">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/tests/traxeednew.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.777778">
+          <caret line="557" column="33" selection-start-line="557" selection-start-column="33" selection-end-line="557" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traxeed/traxeed.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.925926">
+          <caret line="845" column="36" selection-start-line="845" selection-start-column="36" selection-end-line="845" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/minative.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1485781715807" expanded="true" signature="1217:1273" placeholder="SELECT setna... settings" />
+            <marker date="1485781715807" expanded="true" signature="1414:1473" placeholder="SELECT setna... settings" />
+            <marker date="1485781715807" expanded="true" signature="1798:1843" placeholder="SELECT value... settings" />
+            <marker date="1485781715807" expanded="true" signature="2099:2133" placeholder="SELECT * FRO... users" />
+            <marker date="1485781715807" expanded="true" signature="3574:3621" placeholder="SELECT id,ni... country" />
+            <marker date="1485781715807" expanded="true" signature="4055:4111" placeholder="SELECT * FRO... menus" />
+            <marker date="1485781715807" expanded="true" signature="4956:5019" placeholder="SELECT * FRO... menus_child" />
+            <marker date="1485781715807" expanded="true" signature="5322:5359" placeholder="SELECT * FRO... usergroups" />
+            <marker date="1485781715807" expanded="true" signature="5922:5981" placeholder="SELECT `${$g... permissions" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/database.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1454544">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="14" />
+          <folding>
+            <marker date="1485781716084" expanded="true" signature="4041:4062" placeholder="SELECT COUNT... ${$table}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2363636">
+          <caret line="4" column="60" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/adminstarter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.807693">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/ccenter.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="79.15385">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1485781715927" expanded="true" signature="1359:1480" placeholder="INSERT INTO form_contact... " />
+            <marker date="1485781715927" expanded="true" signature="2416:2507" placeholder="INSERT INTO form_replies... " />
+            <marker date="1485781715927" expanded="true" signature="2890:2931" placeholder="SELECT * FRO... form_contact" />
+            <marker date="1485781715927" expanded="true" signature="3532:3624" placeholder="SELECT id,re... " />
+            <marker date="1485781715927" expanded="true" signature="3888:3947" placeholder="SELECT * FRO... form_contact" />
+            <marker date="1485781715927" expanded="true" signature="4270:4315" placeholder="UPDATE form_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/traxeednew.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0">
+          <caret line="331" column="134" selection-start-line="331" selection-start-column="134" selection-end-line="331" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/admin.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.230769">
+          <caret line="13" column="69" selection-start-line="13" selection-start-column="69" selection-end-line="13" selection-end-column="69" />
+          <folding>
+            <marker date="1485781954156" expanded="true" signature="1273:1318" placeholder="UPDATE setti... " />
+            <marker date="1485781954156" expanded="true" signature="1642:1699" placeholder="SELECT id,gr... usergroups" />
+            <marker date="1485781954156" expanded="true" signature="2913:2957" placeholder="SELECT id FR... users" />
+            <marker date="1485781954156" expanded="true" signature="3144:3187" placeholder="SELECT id FR... users" />
+            <marker date="1485781954156" expanded="true" signature="3584:3842" placeholder="INSERT INTO users... " />
+            <marker date="1485781954156" expanded="true" signature="5380:5659" placeholder="UPDATE users... " />
+            <marker date="1485781954156" expanded="true" signature="5984:6235" placeholder="UPDATE users... " />
+            <marker date="1485781954156" expanded="true" signature="6766:6866" placeholder="INSERT INTO languages... " />
+            <marker date="1485781954156" expanded="true" signature="7317:7403" placeholder="UPDATE langu... " />
+            <marker date="1485781954156" expanded="true" signature="7800:7854" placeholder="UPDATE langu... " />
+            <marker date="1485781954156" expanded="true" signature="8230:8270" placeholder="DELETE FROM " />
+            <marker date="1485781954156" expanded="true" signature="8372:8409" placeholder="DELETE FROM " />
+            <marker date="1485781954156" expanded="true" signature="8795:8880" placeholder="INSERT INTO multi_lang... " />
+            <marker date="1485781954156" expanded="true" signature="9343:9445" placeholder="UPDATE multi... " />
+            <marker date="1485781954156" expanded="true" signature="9596:9695" placeholder="UPDATE multi... " />
+            <marker date="1485781954156" expanded="true" signature="10102:10157" placeholder="DELETE FROM " />
+            <marker date="1485781954156" expanded="true" signature="10521:10565" placeholder="UPDATE users... " />
+            <marker date="1485781954156" expanded="true" signature="11121:11340" placeholder="INSERT INTO pagemanager... " />
+            <marker date="1485781954156" expanded="true" signature="12049:12307" placeholder="UPDATE pagem... " />
+            <marker date="1485781954156" expanded="true" signature="13218:13271" placeholder="SELECT * FRO... ${$table}" />
+            <marker date="1485781954156" expanded="true" signature="13541:13580" placeholder="UPDATE ${$ta... " />
+            <marker date="1485781954156" expanded="true" signature="13939:13984" placeholder="UPDATE ${$ta... " />
+            <marker date="1485781954156" expanded="true" signature="14329:14371" placeholder="UPDATE users... " />
+            <marker date="1485781954156" expanded="true" signature="14817:14855" placeholder="SELECT * FRO... ${$table}" />
+            <marker date="1485781954156" expanded="true" signature="15180:15211" placeholder="DELETE FROM " />
+            <marker date="1485781954156" expanded="true" signature="15510:15546" placeholder="SELECT filen... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/languages/english.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/news/news.plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9230769">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/news/news.admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/news/news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/news/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

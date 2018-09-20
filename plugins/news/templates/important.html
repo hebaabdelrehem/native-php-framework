@@ -1,0 +1,20 @@
+<div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 15px">
+	<div class="blocksheader">
+		<h2>Important news</h2>
+	</div>
+{foreach from=$importantData item=newsimp key=j}
+<div class="col-md-2">
+<div class="blocksheader margin25">
+			
+<h2>{$newsimp.newsTitle}</h2>
+</div> 
+    <div class="block margin25">
+        <img src="{$scripturl}contents/news/{$newsimp.newsFiles}" style="height: 100px;">
+
+        <p>{$newsimp.newsBrief|truncate:30:" ...":true}</p>
+        <a href="#" class="btn btn-default moreinfo">More info</a>
+    </div>
+</div>
+{/foreach}
+<div style="clear: both"></div>
+</div>
